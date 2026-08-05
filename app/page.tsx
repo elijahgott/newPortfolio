@@ -1,15 +1,46 @@
 import Channel from "./components/channel";
 
+const channels = [
+  {
+    'name': 'Workout Tracker',
+    'image_source': '/../../cat.jpg',
+  },
+  {
+    'name': 'Music Tracker',
+    'image_source': '/../../cat.jpg',
+  },
+  {
+    'name': 'Script Launcher',
+    'image_source': '/../../cat.jpg',
+  },
+  {
+    'name': 'RSS Feed',
+    'image_source': '/../../cat.jpg',
+  },
+  {
+    'name': 'Snake',
+    'image_source': '/../../cat.jpg',
+  },
+  {
+    'name': 'Todo List',
+    'image_source': '/../../cat.jpg',
+  }
+]
+
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans bg-linear-70 from-zinc-300 to-white dark:bg-black">
       <main className="grid grid-cols-5 grid-rows-3 gap-10 w-full max-w-[75%] h-[90%] flex-col items-center justify-between p-8 sm:items-start border-2">
-        <Channel name="Channel 1" image_source="/../../cat.jpg" />
-        <Channel name="Channel 2" image_source="/../../cat.jpg" />
-        <Channel name="Channel 3" image_source="/../../cat.jpg" />
-        <Channel name="Channel 3" image_source="/../../cat.jpg" />
-        <Channel name="Channel 3" image_source="/../../cat.jpg" />
-        <Channel name="Channel 3" image_source="/../../cat.jpg" />
+        {channels.map(c => {
+          return (<Channel key={c.name} name={c.name} image_source={c.image_source} />)
+        })}
+
+        <h1>What i want</h1>
+        <ul>
+          <li>custom icons for all projects</li>
+          <li>navbar along bottom - maybe link to my linkedin, github, etc</li>
+          <li>account in top left - maybe has about me section with bio and whatnot</li>
+        </ul>
       </main>
     </div>
   );
