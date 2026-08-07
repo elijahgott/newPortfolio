@@ -1,13 +1,32 @@
+import { useEffect, useRef } from 'react';
 import Image from 'next/image'
 
 interface ChannelProps{
   name: string;
   image_source: string;
+  audioUnlocked: boolean;
 }
 
-export default function Channel({name, image_source}: ChannelProps){
+export default function Channel({name, image_source, audioUnlocked}: ChannelProps){
+  const sfxRef = useRef<HTMLAudioElement | null>(null)
+
+  useEffect(() => {
+      sfxRef.current = new Audio('/audio/sfx/denielcz-click.mp3') 
+      sfxRef.current.volume = 1.0
+  
+      return () => {
+        sfxRef.current?.pause()
+      }
+    }, [])
+
   return(
-    <a href="#test">
+    <a href="#test" onMouseEnter={() => {
+        if(!sfxRef.current) return
+        if(audioUnlocked){
+          sfxRef.current?.play()
+        }
+      }
+    }>
       <div className="p-4 relative rounded-2xl bg-zinc-300/15 backdrop-blur-md shadow-lg overflow-hidden aspect-square border-2 border-white/40
                       hover:scale-110 hover:bg-cyan-400/80 hover:cursor-pointer
                       transition-all duration-75">

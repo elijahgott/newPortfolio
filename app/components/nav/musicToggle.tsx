@@ -1,8 +1,11 @@
-'use client' // use this when using useEffect 
 import { useState, useEffect, useRef } from "react"
 import Image from 'next/image'
 
-export default function MusicToggle(){
+interface MusicProps{
+  audioUnlocked: boolean;
+}
+
+export default function MusicToggle({audioUnlocked} : MusicProps){
   const [musicOn, setMusicOn] = useState(false)
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
@@ -19,7 +22,7 @@ export default function MusicToggle(){
   useEffect(() => {
     if(!audioRef.current) return
 
-    if (musicOn){
+    if (audioUnlocked && musicOn){
       audioRef.current.play()
     }
     else{
