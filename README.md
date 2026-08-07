@@ -1,3 +1,16 @@
+![Wii U home menu](./WiiUMenu.jpg)
+The Wii U home menu.
+
+## Summary
+
+My portfolio website is intended to showcase my capabilities as a software developer, and show my progress through the years. Small and large projects are included to provide a full picture of my abilities. I chose this Wii U-inspired design because it is one of my favorite consoles, and I feel it's UI is simple and easy to use, without being too minimal like many modern UIs. I have translated the Wii U's UI into a portfolio as follows:
+
+- Each app represents a project I have completed
+  - Each app leads to a page with details and images about each project
+- Account button in top left leads to 'About me' section with a bio
+- Navbar at bottom includes links to my Github profile, LinkedIn, etc
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
