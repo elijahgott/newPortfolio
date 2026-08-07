@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react"
+import { playSound } from "@/app/utils/soundManager";
 import Image from 'next/image'
 
 interface MusicProps{
@@ -28,10 +29,21 @@ export default function MusicToggle({audioUnlocked} : MusicProps){
     else{
       audioRef.current.pause()
     }
-  }, [musicOn])
+  }, [audioUnlocked, musicOn])
 
   return (
-    <button onClick={() => setMusicOn((previous) => ! previous)} className="hover:scale-110 hover:cursor-pointer">{
+    <button
+    onMouseEnter={() => {
+      if(audioUnlocked){
+        playSound('hover')
+      }
+    }}
+    onClick={() => {
+      setMusicOn((previous) => !previous)
+      if(audioUnlocked){
+        playSound('click')
+      }
+    }} className="hover:scale-110 hover:cursor-pointer active:scale-95">{
       musicOn ?
       <div className="max-w-20 aspect-square">
         <Image src='/music-on.png' alt='Music playing' width={200} height={200} style={{'imageRendering': 'pixelated'}} />
