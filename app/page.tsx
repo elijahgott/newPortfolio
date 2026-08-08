@@ -47,7 +47,6 @@ export default function Home() {
           <li>custom icons for all projects</li>
           <li>navbar along bottom - maybe link to my linkedin, github, etc</li>
           <li>account in top left - maybe has about me section with bio and whatnot</li>
-          <li>pnpm install use-sound for sound effects?</li>
         </ul>
       </main>
     </div>
