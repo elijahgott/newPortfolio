@@ -1,15 +1,17 @@
 import { playSound } from '../utils/soundManager';
+import Link from 'next/link'
 import Image from 'next/image'
 
 interface ChannelProps{
   name: string;
   image_source: string;
+  linkTo: string;
   audioUnlocked: boolean;
 }
 
-export default function Channel({name, image_source, audioUnlocked}: ChannelProps){
+export default function Channel({name, image_source, linkTo, audioUnlocked}: ChannelProps){
   return(
-    <a className='block w-full' href="#test" 
+    <Link className='block w-full' href={linkTo}
       onMouseEnter={() => {
         if(audioUnlocked){
           playSound('hover')
@@ -40,6 +42,6 @@ export default function Channel({name, image_source, audioUnlocked}: ChannelProp
         <div className='pointer-events-none absolute bottom-4 right-0 bg-radial from-white/80 to-transparent to-80% h-4 w-4 rounded-xl' />
         <p className='text-center text-white font-bold drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]'>{name}</p>
       </div>
-    </a>
+    </Link>
   )
 }
