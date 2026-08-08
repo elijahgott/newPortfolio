@@ -6,10 +6,12 @@ type MusicContextType = {
   playMusic: () => void;
   pauseMusic: () => void;
   toggleMusic: () => void;
+  changeSong: (par: string) => void;
 }
 
-const music = {
+const music : {[key: string]: string } = {
     "mainMenu": '/audio/bg/8bit-Bossa.mp3',
+    "chill": '/audio/bg/ChillLofiR.mp3' // for testing, may keep for settings or something else
   }
 
 const MusicContext = createContext<MusicContextType | null>(null)
@@ -45,6 +47,13 @@ export function MusicProvider({children}: {children: React.ReactNode}){
     }
   }
 
+  const changeSong = (songName: string) => {
+    pauseMusic()
+    bgMusic.current = new Audio(music[songName]);
+    bgMusic.current.loop = true
+    playMusic()
+  }
+
   return(
     <MusicContext.Provider
       value={{
@@ -52,6 +61,7 @@ export function MusicProvider({children}: {children: React.ReactNode}){
         playMusic,
         pauseMusic,
         toggleMusic,
+        changeSong,
       }}
       >
         {children}
