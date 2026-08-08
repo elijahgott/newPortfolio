@@ -7,6 +7,9 @@ type MusicContextType = {
   pauseMusic: () => void;
   toggleMusic: () => void;
   changeSong: (par: string) => void;
+  currentVolume: number;
+  volumeUp: () => void;
+  volumeDown: () => void;
 }
 
 const music : {[key: string]: string } = {
@@ -23,6 +26,7 @@ export function MusicProvider({children}: {children: React.ReactNode}){
   // Create the audio object after the component mounts
   useEffect(() => {
     bgMusic.current = new Audio(music['mainMenu']);
+    bgMusic.current.volume = 0.5
     bgMusic.current.loop = true
   }, []);
 
@@ -50,8 +54,38 @@ export function MusicProvider({children}: {children: React.ReactNode}){
   const changeSong = (songName: string) => {
     pauseMusic()
     bgMusic.current = new Audio(music[songName]);
+    bgMusic.current.volume = 0.5
+    setCurrentVolume(5)
     bgMusic.current.loop = true
     playMusic()
+  }
+
+  const [currentVolume, setCurrentVolume] = useState(5) // default volume of 0.5
+
+  const volumeUp = () => {
+    if(!bgMusic.current) return
+
+    if(currentVolume >= 10){
+      bgMusic.current.volume = 1.0
+      setCurrentVolume(10)
+    }
+    else{
+      bgMusic.current.volume = bgMusic.current.volume + 0.1
+      setCurrentVolume(currentVolume + 1)
+    }
+  }
+
+  const volumeDown = () => {
+    if(!bgMusic.current) return
+    
+    if(currentVolume <= 0){
+      bgMusic.current.volume = 0.0
+      setCurrentVolume(0)
+    }
+    else{
+      bgMusic.current.volume = bgMusic.current.volume - 0.1
+      setCurrentVolume(currentVolume - 1)
+    }
   }
 
   return(
@@ -62,6 +96,9 @@ export function MusicProvider({children}: {children: React.ReactNode}){
         pauseMusic,
         toggleMusic,
         changeSong,
+        currentVolume,
+        volumeUp,
+        volumeDown
       }}
       >
         {children}

@@ -9,7 +9,7 @@ interface ChannelProps{
 
 export default function Channel({name, image_source, audioUnlocked}: ChannelProps){
   return(
-    <a href="#test" 
+    <a className='block w-full' href="#test" 
       onMouseEnter={() => {
         if(audioUnlocked){
           playSound('hover')
@@ -20,18 +20,19 @@ export default function Channel({name, image_source, audioUnlocked}: ChannelProp
           playSound('click')
         }
       }}>
+      
       <div className="p-4 relative rounded-2xl bg-zinc-300/15 backdrop-blur-md shadow-lg overflow-hidden aspect-square border-2 border-white/40
                       hover:scale-110 hover:bg-cyan-400/80 hover:cursor-pointer
                       active:scale-95
                       transition-all duration-75">
         <div className='m-auto relative w-[95%] h-[95%]'>
-          <Image src={image_source} alt={name} fill sizes='(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw' className="rounded-xl object-contain" />
+          <Image src={image_source} alt={name} fill sizes='(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 20vw' className="rounded-xl object-contain" />
         </div>
 
         { /* top shiny */}
         <div className="pointer-events-none absolute inset-x-0 top-0 h-1/2 rounded-t-2xl bg-linear-to-b from-white/40 to-transparent" />
         { /* inner border */}
-        <div className="pointer-events-none absolute inset-0.5 rounded-[calc(theme(borderRadius.2xl)-2px) border border-white/20" />
+        <div className="pointer-events-none absolute inset-0.5 rounded-[calc(var(--radius-2xl)-2px)] border border-white/20" />
         {/* shiny corners */}
         <div className='pointer-events-none absolute top-0 left-0 bg-radial from-white/80 to-transparent to-75% h-6 w-6 rounded-2xl' />
         <div className='pointer-events-none absolute top-4 left-0 bg-radial from-white/80 to-transparent to-75% h-4 w-4 rounded-2xl' />
