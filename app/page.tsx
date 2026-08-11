@@ -47,7 +47,7 @@ export default function Home() {
   const [audioUnlocked, setAudioUnlocked] = useState(false)
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans bg-linear-70 from-zinc-300 to-white dark:bg-black" onClick={() => setAudioUnlocked(true)}>
+    <div className="flex flex-col flex-1 items-center justify-center" onClick={() => setAudioUnlocked(true)}>
       <NavBar audioUnlocked={audioUnlocked} />
       <div className="flex max-w-[1920px]">
         <div className="w-[10%] pl-4">
@@ -60,11 +60,12 @@ export default function Home() {
         </main>
         <div className="w-[10%]">
           {/* here for spacing */}
-          <h1 className="font-bold">What i want</h1>
-          <ul>
+          <h1 className="font-bold text-black dark:text-white">What i want</h1>
+          <ul className="text-black dark:text-white">
             <li>custom icons for all projects</li>
             <li>navbar along bottom - maybe link to my linkedin, github, etc</li>
             <li>account in top left - maybe has about me section with bio and whatnot</li>
+            <li>dark / light mode toggle?</li>
           </ul>
         </div>
       </div>
