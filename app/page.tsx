@@ -49,7 +49,7 @@ export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center" onClick={() => setAudioUnlocked(true)}>
       <NavBar audioUnlocked={audioUnlocked} />
-      <div className="flex max-w-[1920px]">
+      <div className="flex w-full max-w-[1920px]">
         <div className="w-[10%] pl-4">
           <Channel name="Elijah" image_source='/images/cat.jpg' linkTo="about-me" audioUnlocked={audioUnlocked} />
         </div>

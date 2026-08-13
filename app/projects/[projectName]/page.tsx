@@ -1,5 +1,7 @@
-import Link from 'next/link'
 import Image from 'next/image'
+
+import Channel from '@/app/components/channel'
+import Bubble from '@/app/components/bubble'
 
 interface ProjectProps{
   params: Promise<{
@@ -36,20 +38,20 @@ export default async function ProjectPage({params} : ProjectProps){
 
   return(
     <div className="text-black flex flex-col flex-1 items-center justify-center">
-          <div className="flex w-[80%] max-w-[1920px] border-2 border-red-500">
-            <div className="absolute z-50 w-fit aspect-square border rounded-[50%]">
-              <div className=''>
-                <Link href="/">(BACK ARROW)</Link>
-              </div>
+          <div className="flex w-full max-w-[1920px] border-2 border-red-500">
+            <div className='w-[10%] pl-4 border'>
+              <Channel name='back' image_source='/ui/chat.png' linkTo='/' audioUnlocked={true} /> {/* audiounlocked set to true bc idk how else. maybe put audioUnlocked in state? */}
             </div>
             <main className="flex w-[80%] h-[90%] mx-auto flex-col items-center justify-between p-8 sm:items-start">
-              <div className='flex items-baseline mx-auto w-full border border-white'>
-                <div className='relative w-48 aspect-square'>
-                  <Image src={project.image_source} alt={project.name} fill className="rounded-xl object-contain" />
-                </div>
-                <h1 className='ml-2 text-5xl text-center text-white font-bold drop-shadow-[0_0_4px_rgba(0,0,0,0.8)] line-'>{project.name} - probably put in bubble thing like channel</h1>
+              <div className='w-full'>
+                <Bubble>
+                  <div className='relative w-48 aspect-square'>
+                    <Image src={project.image_source} alt={project.name} fill className="rounded-xl object-contain" />
+                  </div>
+                  <h1 className='h-fit ml-4 text-5xl text-center text-white font-bold drop-shadow-[0_0_4px_rgba(0,0,0,0.8)] line-'>{project.name}</h1>
+                </Bubble>
               </div>
-
+              
               <div className='w-full mt-4'>
                 <div className='relative w-[50%] aspect-video border float-left'>
                   <Image src={project.image_source} alt={project.name} fill className="rounded-xl object-contain" />
@@ -59,6 +61,9 @@ export default async function ProjectPage({params} : ProjectProps){
                 <p>add scrollbar?</p>
               </div>
             </main>
+            <div className='w-[10%] border'>
+              { /* for spacing */ }
+            </div>
           </div>
     </div>
   )
