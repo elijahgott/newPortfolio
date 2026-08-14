@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { MusicProvider } from "./utils/musicContext";
+import { AudioProvider } from "./utils/audioContext";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -26,11 +27,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="h-full flex flex-col font-sans bg-zinc-200 bg-linear-70 from-zinc-300 to-white
       dark:bg-gray-900 dark:bg-linear-70 dark:from-gray-900 dark:to-black">
-        <MusicProvider>
-          <div className="mx-auto my-auto w-full max-w-[1920px] sm:h-full md:h-[70vh] min-h-[65vh] max-h-270 border border-green-500">
-            {children}
-          </div>
-        </MusicProvider>
+        <AudioProvider>
+          <MusicProvider>
+            <div className="mx-auto my-auto w-full max-w-[1920px] sm:h-full md:h-[70vh] min-h-[65vh] max-h-270 border border-green-500">
+              {children}
+            </div>
+          </MusicProvider>
+        </AudioProvider>
       </body>
     </html>
   );

@@ -1,5 +1,6 @@
 'use client'
 import { playSound } from '../utils/soundManager';
+import { useAudio } from '../utils/audioContext';
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -7,10 +8,11 @@ interface ChannelProps{
   name: string;
   image_source: string;
   linkTo: string;
-  audioUnlocked: boolean;
 }
 
-export default function Channel({name, image_source, linkTo, audioUnlocked}: ChannelProps){
+export default function Channel({name, image_source, linkTo}: ChannelProps){
+  const {audioUnlocked} = useAudio()
+
   return(
     <Link className='block w-full' href={linkTo}
       onMouseEnter={() => {
