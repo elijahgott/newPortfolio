@@ -89,7 +89,7 @@ export default function Home() {
         <div className="w-[10%] pl-4 pt-4">
           <Channel name="Elijah" image_source='/images/cat.jpg' linkTo="about-me" audioUnlocked={audioUnlocked} />
         </div>
-        <main className="grid grid-cols-3 grid-rows-5 gap-6 w-[80%] p-4
+        <main className="grid grid-cols-3 grid-rows-5 gap-6 w-[80%] pr-[10%] p-4
         md:grid-cols-5 md:grid-rows-3 md:gap-4 md:p-8
         lg:gap-8">
           {projects.map(c => {
