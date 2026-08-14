@@ -40,6 +40,42 @@ const projects = [
     'linkTo': '/projects/doom',
     'image_source': '/images/cat.jpg',
     'description': 'MF DOOM!!!!'
+  },
+  {
+    'name': 'Workout Tracker',
+    'linkTo': '/projects/workout-tracker',
+    'image_source': '/images/cat.jpg',
+    'description': 'used for tracking workouts'
+  },
+  {
+    'name': 'Music Tracker',
+    'linkTo': '/projects/music-tracker',
+    'image_source': '/images/cat.jpg',
+    'description': 'used for tracking music'
+  },
+  {
+    'name': 'Script Launcher',
+    'linkTo': '/projects/script-launcher',
+    'image_source': '/images/cat.jpg',
+    'description': 'used for launching scripts'
+  },
+  {
+    'name': 'RSS Feed',
+    'linkTo': '/projects/rss-feed',
+    'image_source': '/images/cat.jpg',
+    'description': 'rss feed from several sources'
+  },
+  {
+    'name': 'Snake',
+    'linkTo': '/projects/snake',
+    'image_source': '/images/cat.jpg',
+    'description': 'snake eat food'
+  },
+  {
+    'name': 'DOOM',
+    'linkTo': '/projects/doom',
+    'image_source': '/images/cat.jpg',
+    'description': 'MF DOOM!!!!'
   }
 ]
 
@@ -47,13 +83,15 @@ export default function Home() {
   const [audioUnlocked, setAudioUnlocked] = useState(false)
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center" onClick={() => setAudioUnlocked(true)}>
+    <div className="h-full flex flex-col flex-1 items-center justify-center" onClick={() => setAudioUnlocked(true)}>
       <NavBar audioUnlocked={audioUnlocked} />
-      <div className="flex w-full max-w-[1920px]">
-        <div className="w-[10%] pl-4">
+      <div className="flex w-full">
+        <div className="w-[10%] pl-4 pt-4">
           <Channel name="Elijah" image_source='/images/cat.jpg' linkTo="about-me" audioUnlocked={audioUnlocked} />
         </div>
-        <main className="grid grid-cols-5 grid-rows-3 gap-10 w-[80%] h-[90%] flex-col items-center justify-between p-8 sm:items-start">
+        <main className="grid grid-cols-3 grid-rows-5 gap-6 w-[80%] p-4
+        md:grid-cols-5 md:grid-rows-3 md:gap-4 md:p-8
+        lg:gap-8">
           {projects.map(c => {
             return (<Channel key={c.name} name={c.name} image_source={c.image_source} linkTo={c.linkTo} audioUnlocked={audioUnlocked} />)
           })}
