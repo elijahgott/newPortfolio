@@ -4,6 +4,8 @@ import { AudioProvider } from "./utils/audioContext";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import NavBar from "./components/nav/navBar";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -31,6 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <MusicProvider>
             <div className="mx-auto my-auto w-full max-w-[1920px] sm:h-full md:h-[70vh] min-h-[65vh] max-h-270 border border-green-500">
               {children}
+              <NavBar />
             </div>
           </MusicProvider>
         </AudioProvider>

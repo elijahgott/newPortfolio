@@ -1,14 +1,30 @@
+'use client'
+import { useAudio } from "../utils/audioContext";
+import { playSound } from '../utils/soundManager';
+
 interface BubbleProps{
   type: string;
   children: React.ReactNode;
 }
 
 export default function Bubble({type, children}: BubbleProps){
+  const {audioUnlocked} = useAudio()
+
   return (
     <div className="flex p-4 w-full relative rounded-2xl bg-zinc-300/15 backdrop-blur-md shadow-lg overflow-hidden border-2 border-white/40
                     hover:scale-105 hover:bg-cyan-400/80 hover:cursor-pointer
                     active:scale-95
-                    transition-all duration-75">
+                    transition-all duration-75"
+      onMouseEnter={() => {
+        if(audioUnlocked){
+          playSound('hover')
+        }
+      }}
+      onClick={() => {
+        if(audioUnlocked){
+          playSound('click')
+        }
+      }}>
       { /* top shiny -- DOESNT WORK WHEN SUPER WIDE */}
       {/* <div className="pointer-events-none absolute inset-x-0 top-0 h-1/2 rounded-t-2xl bg-linear-to-b from-white/40 to-transparent" /> */}
       { /* inner border */}

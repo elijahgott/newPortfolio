@@ -1,5 +1,4 @@
 import Channel from "./components/channel";
-import NavBar from "./components/nav/navBar";
 
 const projects = [
   {
@@ -79,7 +78,6 @@ const projects = [
 export default function Home() {
   return (
     <div className="h-full flex flex-col flex-1 items-center justify-center">
-      <NavBar />
       <div className="flex w-full">
         <div className="w-[10%] pl-4 pt-4">
           <Channel name="Elijah" image_source='/images/cat.jpg' linkTo="about-me" />
