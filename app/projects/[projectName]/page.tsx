@@ -2,6 +2,7 @@ import Image from 'next/image'
 
 import Channel from '@/app/components/channel'
 import Bubble from '@/app/components/bubble'
+import ContentContainer from '@/app/components/contentContainer'
 
 interface ProjectProps{
   params: Promise<{
@@ -95,20 +96,12 @@ export default async function ProjectPage({params} : ProjectProps){
             </Bubble>
           </div>
           
-          <div className='relative w-full mt-4 p-6 rounded-2xl border-4 border-white
-          bg-zinc-500/20 shadow-[0px_24px_2px_-1px_rgba(0,0,0,0.3)]
-          dark:bg-gray-900 dark:bg-linear-70 dark:from-gray-900 dark:to-black'>
-            { /* gradients along borders */ }
-            <div className='w-[10%] h-full pointer-events-none absolute left-0 top-0 rounded-l-lg bg-linear-to-r from-white/60' />
-            <div className='w-[10%] h-full pointer-events-none absolute right-0 top-0 rounded-r-lg bg-linear-to-l from-white/60' />
-            <div className='w-full h-[10%] pointer-events-none absolute left-0 top-0 rounded-t-lg bg-linear-to-b from-white/60' />
-            <div className='w-full h-[10%] pointer-events-none absolute right-0 bottom-0 rounded-b-lg bg-linear-to-t from-white/60' />
-
+          <ContentContainer>
             <div className='relative float-left mr-4 my-2 w-[50%] aspect-video'>
               <Image src={project.imageSource} alt={project.name} fill className="rounded-2xl object-fill shadow-2xl border border-white" />
             </div>
 
-            <div>
+            <div className='relative z-10'>
               <p className='m-6 indent-2 text-xl'>{project.description}</p>
             </div>
 
@@ -131,8 +124,7 @@ export default async function ProjectPage({params} : ProjectProps){
                 </div>
               </Bubble>
             </div>
-            
-          </div>
+          </ContentContainer>
         </main>
     </div>
   )
