@@ -4,38 +4,32 @@ const projects = [
   {
     'name': 'Workout Tracker',
     'linkTo': '/projects/workout-tracker',
-    'imageSource': '/channelIcons/workout-tracker.png',
-    'description': 'used for tracking workouts'
+    'imageSource': '/channelIcons/workout-tracker-2.png',
   },
   {
     'name': 'Music Tracker',
     'linkTo': '/projects/music-tracker',
-    'imageSource': '/images/cat.jpg',
-    'description': 'used for tracking music'
+    'imageSource': '/channelIcons/music-tracker.png',
   },
   {
     'name': 'Script Launcher',
     'linkTo': '/projects/script-launcher',
-    'imageSource': '/images/cat.jpg',
-    'description': 'used for launching scripts'
+    'imageSource': '/channelIcons/script-launcher.png',
   },
   {
     'name': 'RSS Feed',
     'linkTo': '/projects/rss-feed',
-    'imageSource': '/images/cat.jpg',
-    'description': 'rss feed from several sources'
+    'imageSource': '/channelIcons/rss-feed.png',
   },
   {
-    'name': 'Snake',
-    'linkTo': '/projects/snake',
+    'name': 'Text-Based RPG',
+    'linkTo': '/projects/text-rpg',
     'imageSource': '/images/cat.jpg',
-    'description': 'snake eat food'
   },
   {
-    'name': 'DOOM',
-    'linkTo': '/projects/doom',
+    'name': '2D Platformer Demo',
+    'linkTo': '/projects/2d-platformer',
     'imageSource': '/images/cat.jpg',
-    'description': 'MF DOOM!!!!'
   },
 ]
 
