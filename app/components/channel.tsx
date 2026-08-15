@@ -6,11 +6,11 @@ import Image from 'next/image'
 
 interface ChannelProps{
   name: string;
-  image_source: string;
+  imageSource: string;
   linkTo: string;
 }
 
-export default function Channel({name, image_source, linkTo}: ChannelProps){
+export default function Channel({name, imageSource, linkTo}: ChannelProps){
   const {audioUnlocked} = useAudio()
 
   return(
@@ -31,7 +31,7 @@ export default function Channel({name, image_source, linkTo}: ChannelProps){
                       active:scale-95
                       transition-all duration-75">
         <div className='m-auto relative w-[95%] h-[95%]'>
-          <Image src={image_source} alt={name} fill sizes='(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 20vw' className="rounded-xl object-contain" />
+          <Image src={imageSource} alt={name} fill sizes='(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 20vw' className="rounded-xl object-contain" style={{'imageRendering': 'pixelated'}} />
         </div>
 
         { /* top shiny */}

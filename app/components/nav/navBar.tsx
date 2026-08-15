@@ -1,32 +1,30 @@
 'use client'
+
+import NavItem from "./navItem"
 import MusicToggle from "./musicToggle"
-import Image from 'next/image'
-import { useMusic } from "@/app/utils/musicContext"
+import VolumeUp from './volumeUp'
+import VolumeDown from './volumeDown'
+
+const navItems = [
+  {
+    name: 'LinkedIn',
+    linkTo: 'https://www.linkedin.com/in/elijah-gott/',
+    imageSource: '/ui/linkedin.png'
+  },
+  {
+    name: 'GitHub',
+    linkTo: 'https://github.com/elijahgott',
+    imageSource: '/ui/github.png'
+  },
+]
 
 export default function NavBar(){
-  const { changeSong, volumeUp, volumeDown } = useMusic()
-
   return(
     <nav className="absolute bottom-0 my-8 py-4 flex flex-row space-x-8 items-center justify-center w-dvw">
+      {navItems.map(item => <NavItem key={item.name} name={item.name} linkTo={item.linkTo} imageSource={item.imageSource} />)}
       <MusicToggle />
-      <div className="max-w-20 aspect-square">
-        <button>
-          <Image onClick={() => changeSong('chill')} src='/ui/chat.png' alt='Music playing' width={200} height={200} style={{'imageRendering': 'pixelated'}} />
-        </button>
-      </div>
-      <div className="max-w-20 aspect-square">
-        <Image src='/ui/music-on.png' alt='Music playing' width={200} height={200} style={{'imageRendering': 'pixelated'}} />
-      </div>
-      <div className="max-w-20 aspect-square">
-        <button onClick={() => volumeUp()}>
-          <Image src='/ui/chat.png' alt='Music playing' width={200} height={200} style={{'imageRendering': 'pixelated'}} />
-        </button>
-      </div>
-      <div className="max-w-20 aspect-square">
-        <button onClick={() => volumeDown()}>
-          <Image src='/ui/music-on.png' alt='Music playing' width={200} height={200} style={{'imageRendering': 'pixelated'}} />
-        </button>
-      </div>
+      <VolumeDown />
+      <VolumeUp />
     </nav>
   )
 }

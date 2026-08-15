@@ -43,7 +43,7 @@ export default async function ProjectPage({params} : ProjectProps){
     <div className="flex h-full overflow-hidden">
 
         <div className='w-[10%] shrink-0 pl-4 pt-4'>
-          <Channel name='back' image_source='/ui/chat.png' linkTo='/' audioUnlocked={true} /> {/* audiounlocked set to true bc idk how else. maybe put audioUnlocked in state? */}
+          <Channel name='Home' imageSource='/ui/back-arrow.png' linkTo='/' />
         </div>
 
         <main className="min-h-0 w-[80%] flex-1 overflow-y-auto p-8 pr-[10%]">
@@ -57,9 +57,15 @@ export default async function ProjectPage({params} : ProjectProps){
             </Bubble>
           </div>
           
-          <div className='w-full mt-4 p-6 rounded-2xl shadow-lg
-          bg-zinc-200 bg-linear-70 from-zinc-300 to-white
-          dark:bg-gray-900 dark:bg-linear-70 dark:from-gray-900 dark:to-black'> {/* this background doesnt feel right but i dont want another bubble */}
+          <div className='relative w-full mt-4 p-6 rounded-2xl border-4 border-white
+          bg-zinc-500/20 shadow-[0px_24px_2px_-1px_rgba(0,0,0,0.3)]
+          dark:bg-gray-900 dark:bg-linear-70 dark:from-gray-900 dark:to-black'>
+            { /* gradients along borders */ }
+            <div className='w-[10%] h-full pointer-events-none absolute left-0 top-0 rounded-l-lg bg-linear-to-r from-white/60' />
+            <div className='w-[10%] h-full pointer-events-none absolute right-0 top-0 rounded-r-lg bg-linear-to-l from-white/60' />
+            <div className='w-full h-[10%] pointer-events-none absolute left-0 top-0 rounded-t-lg bg-linear-to-b from-white/60' />
+            <div className='w-full h-[10%] pointer-events-none absolute right-0 bottom-0 rounded-b-lg bg-linear-to-t from-white/60' />
+
             <div className='relative float-left mr-4 my-2 w-[50%] aspect-video rounded-2xl border'>
               <Image src={project.image_source} alt={project.name} fill className="rounded-xl object-contain" />
             </div>

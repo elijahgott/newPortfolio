@@ -1,5 +1,5 @@
 'use client'
-import { createContext, useContext, useRef, useState, useEffect } from "react"
+import { createContext, useContext, useState } from "react"
 
 type AudioContextType = {
   audioUnlocked: boolean;
