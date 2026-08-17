@@ -7,12 +7,12 @@ import VolumeDown from './volumeDown'
 
 const navItems = [
   {
-    name: 'LinkedIn',
+    name: 'Elijah Gott | LinkedIn',
     linkTo: 'https://www.linkedin.com/in/elijah-gott/',
     imageSource: '/ui/linkedin.png'
   },
   {
-    name: 'GitHub',
+    name: 'Elijah Gott | GitHub',
     linkTo: 'https://github.com/elijahgott',
     imageSource: '/ui/github.png'
   },

@@ -25,8 +25,19 @@ export default function AboutMe(){
               
               <ContentContainer>
                 <div className="relative z-10 p-4">
-                  <h1 className="font-bold text-3xl text-center">Junior Software Developer</h1>
-                  <p className="mt-4 indent-4">I graduated with a Bachelor&apos;s Degree in Computer Science in 2024, which was just the start of my software development journey. While I had some experience with web development back in 7th grade, I didn&apos;t really begin developing software and diving deeper into the world of programming until beginning college, with the introductory Computer Science classes. Since graduating, I have focused on expanding my skillset by learning new languages and technologies through projects, like a text-based RPG made in C#, a workout tracking app that uses MongoDB to store data and Tailwind for the styling, and more.</p>
+                  <section className="mb-8">
+                    <h2 className="font-bold text-3xl text-center">Junior Software Developer</h2>
+                    <p className="mt-4 indent-4 text-xl">I graduated with a Bachelor&apos;s Degree in Computer Science in 2024, which was just the start of my software development journey. While I had some experience with web development back in 7th grade, I didn&apos;t really begin developing software and diving deeper into the world of programming until beginning college, with the introductory Computer Science classes. Since graduating, I have focused on expanding my skillset by learning new languages and technologies through projects, like a text-based RPG made in C#, a workout tracking app that uses MongoDB to store data and Tailwind for the styling, and more.</p>
+                  </section>
+
+                  <section className="mb-8">
+                    <h2 className="mb-4 font-bold text-3xl text-center">Personal Life</h2>
+                    <div className="relative w-64 h-64 ml-8 float-right">
+                      <Image src="/images/cat.jpg" alt="Photo of me doing stuff" fill sizes="256px" className="rounded-xl object-cover" />
+                    </div>
+                    <p className="indent-4 text-xl">In my personal time, I love to workout, read, play basketball and video games, and go hiking and biking. Some of my favorite books are The Road by Cormac McCarthy and One Flew Over the Cuckoos Nest by Ken Kesey. </p>
+                  </section>
+                  
                 </div>
               </ContentContainer>
             </main>

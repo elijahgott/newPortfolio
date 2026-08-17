@@ -31,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       dark:bg-gray-900 dark:bg-linear-70 dark:from-gray-900 dark:to-black">
         <AudioProvider>
           <MusicProvider>
-            <div className="mx-auto my-auto w-full max-w-[1920px] sm:h-full md:h-[70vh] min-h-[65vh] max-h-270 border border-green-500">
+            <div className="mx-auto my-auto w-full max-w-[1920px] sm:h-full md:h-[70vh] min-h-[65vh] max-h-270">
               {children}
               <NavBar />
             </div>
