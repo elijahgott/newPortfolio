@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <div className="h-full flex flex-col flex-1 items-center justify-center">
       <div className="flex w-full">
-        <div className="w-[10%] pl-4 pt-4">
+        <div className="w-[10%] pl-4 pt-4 mt-0 2xl:mt-4">
           <Channel name="Elijah" imageSource='/images/cat.jpg' linkTo="about-me" />
         </div>
         <main className="grid grid-cols-3 grid-rows-5 gap-6 w-[80%] pr-[10%] p-4
