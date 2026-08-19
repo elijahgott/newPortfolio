@@ -20,7 +20,7 @@ const navItems = [
 
 export default function NavBar(){
   return(
-    <nav className="absolute bottom-[-112] py-4 flex flex-row space-x-8 items-center justify-center w-full bg-white">
+    <nav className="absolute bottom-[-112] py-4 flex flex-row space-x-8 items-center justify-center w-full bg-linear-160 from-zinc-300 to-white rounded-b-2xl">
       {navItems.map(item => <NavItem key={item.name} name={item.name} linkTo={item.linkTo} imageSource={item.imageSource} />)}
       <MusicToggle />
       <VolumeDown />

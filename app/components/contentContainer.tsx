@@ -1,10 +1,27 @@
+'use client'
+import { useAudio } from "../utils/audioContext";
+import { playSound } from '../utils/soundManager';
+
 interface ContentContainerProps{
   children: React.ReactNode;
 }
 
 export default function ContentContainer({children}: ContentContainerProps){
+  const {audioUnlocked} = useAudio()
+  
   return(
-    <div className='select-none relative w-full mt-4 p-6 rounded-2xl border-4 border-white
+    <div
+    onMouseEnter={() => {
+        if(audioUnlocked){
+          playSound('hover')
+        }
+      }}
+      onClick={() => {
+        if(audioUnlocked){
+          playSound('click')
+        }
+      }}
+    className='select-none relative w-full mt-4 p-6 rounded-2xl border-4 border-white
     bg-zinc-500/20 shadow-[0px_24px_2px_-1px_rgba(0,0,0,0.3)]
     dark:bg-gray-900 dark:bg-linear-70 dark:from-gray-900 dark:to-black
      hover:border-cyan-400/80 hover:cursor-pointer hover:border-8
