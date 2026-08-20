@@ -92,7 +92,7 @@ export default async function ProjectPage({params} : ProjectProps){
               <div className='relative w-48 aspect-square'>
                 <Image src={project.iconSource} alt={project.name} style={{'imageRendering': 'pixelated'}} fill className="rounded-xl object-contain" />
               </div>
-              <h1 className='h-fit ml-4 text-5xl text-center text-white font-bold drop-shadow-[0_0_4px_rgba(0,0,0,0.8)] line-'>{project.name}</h1>
+              <h1 className='h-fit ml-4 text-5xl text-center text-white font-bold drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]'>{project.name}</h1>
             </Bubble>
           </div>
           
