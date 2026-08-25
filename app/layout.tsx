@@ -27,11 +27,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="h-full flex flex-col font-sans bg-black pb-[5%]
+      <body className="h-full flex flex-col font-sans bg-black
       dark:bg-gray-900 dark:bg-linear-70 dark:from-gray-900 dark:to-black">
         <AudioProvider>
           <MusicProvider>
-            <div className="relative mx-auto my-auto w-full max-w-[1920px] sm:h-full md:h-[70vh] min-h-[65vh] max-h-270 bg-linear-70 from-zinc-300 to-white rounded-t-2xl">
+            <div className="relative mx-auto my-auto w-full max-w-[1920px] sm:h-full md:h-[80vh] lg:h-[84vh] min-h-[65vh] max-h-270 bg-linear-70 from-zinc-300 to-white rounded-2xl">
               {children}
               <NavBar />
             </div>
