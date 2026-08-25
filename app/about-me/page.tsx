@@ -22,6 +22,14 @@ const skillsAndTech = [
   },
 ]
 
+function generateRandom(n: number){
+  return Math.random() * (2 * n) - n
+}
+
+function generateDuration(){
+  return Math.random() * (10 - 5) + 2
+}
+
 export default function AboutMe(){
   return(
     <div className="flex h-full overflow-hidden">
@@ -52,7 +60,11 @@ export default function AboutMe(){
                         <ul className="flex mx-auto">
                           {skillsAndTech.map((item, i) => {
                             return (
-                              <div key={i} className="w-fit m-2">
+                              <div key={i} className="w-fit m-2 skill-bubble" style={{
+                                "--float-x": `${generateRandom(4)}px`,
+                                "--float-y": `${generateRandom(4)}px`,
+                                "--float-duration": `${generateDuration()}s`
+                                } as React.CSSProperties}>
                                 <Bubble type="">
                                   <p className="text-white font-bold drop-shadow-[0_0_4px_rgba(0,0,0,0.8)] text-nowrap">{item.name}</p>
                                 </Bubble>
@@ -60,7 +72,6 @@ export default function AboutMe(){
                             )
                           }
                           )}
-                          <li>Should I add an animation where 1. bubbles shrink and grow / opacity shifts or 2. bubbles float around a little bit</li>
                         </ul>
                     </div>
                   </section>

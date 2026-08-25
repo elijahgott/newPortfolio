@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+.skill-bubble{
+  animation: float var(--float-duration) ease-in-out infinite;
+}
+
+@keyframes float{
+  0%, 100%{
+    transform: translate3d(0, 0, 0);
+  }
+  50%{
+    transform: translate3d(var(--float-x), var(--float-y), 0);
+  }
+}
