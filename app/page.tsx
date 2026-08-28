@@ -1,4 +1,8 @@
+'use client'
+import { useEffect } from "react";
 import Channel from "./components/channel";
+
+import { useNav } from "./utils/navContext";
 
 const projects = [
   {
@@ -64,6 +68,12 @@ const projects = [
 ]
 
 export default function Home() {
+  const { setVisibility } = useNav()
+
+  useEffect(() => {
+    setVisibility(true)
+  }, [])
+
   return (
     <div className="h-full flex flex-col flex-1 items-center justify-center">
       <div className="flex w-full mb-[5%]">
@@ -78,14 +88,14 @@ export default function Home() {
           })}
         </main>
         <div className="w-[10%]">
-          {/* here for spacing */}
           <h1 className="font-bold text-black dark:text-white">What i want</h1>
+
           <ul className="list-disc text-black dark:text-white">
             <li>dark / light mode toggle?</li>
             <li>make nav disappear after a bit / reappear when mouse hover?</li>
             <li>or add nav-sized padding to bottom of pages to ensure readable</li>
-
           </ul>
+
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { MusicProvider } from "./utils/musicContext";
 import { AudioProvider } from "./utils/audioContext";
+import { NavProvider } from "./utils/navContext"
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -31,10 +32,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       dark:bg-gray-900 dark:bg-linear-70 dark:from-gray-900 dark:to-black">
         <AudioProvider>
           <MusicProvider>
-            <div className="relative mx-auto my-auto w-full max-w-[1920px] sm:h-full md:h-[80vh] lg:h-[84vh] min-h-[65vh] max-h-270 bg-linear-70 from-zinc-300 to-white rounded-2xl">
-              {children}
-              <NavBar />
-            </div>
+            <NavProvider>
+              <div className="relative mx-auto my-auto w-full max-w-[1920px] sm:h-full md:h-[80vh] lg:h-[84vh] min-h-[65vh] max-h-270 bg-linear-70 from-zinc-300 to-white rounded-2xl">
+                {children}
+                <NavBar />
+              </div>
+            </NavProvider>
           </MusicProvider>
         </AudioProvider>
       </body>
