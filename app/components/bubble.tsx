@@ -11,7 +11,7 @@ export default function Bubble({type, children}: BubbleProps){
   const {audioUnlocked} = useAudio()
 
   return (
-    <div className="flex p-4 w-full relative rounded-2xl bg-zinc-300/15 backdrop-blur-md shadow-lg overflow-hidden border-2 border-white/40
+    <div className="select-none flex p-4 w-full relative rounded-2xl bg-zinc-300/15 backdrop-blur-md shadow-lg overflow-hidden border-2 border-white/40
       hover:scale-105 hover:bg-cyan-400/80 hover:cursor-pointer
       active:scale-95 active:bg-cyan-500/80
       transition-all duration-75"
