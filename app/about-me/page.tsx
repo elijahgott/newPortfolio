@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 import Channel from "../components/channel"
 import Bubble from "../components/bubble"
@@ -9,7 +10,7 @@ const skillsAndTech = [
     'name': 'Java'
   },
   {
-    'name': 'C / C++'
+    'name': 'C++'
   },
   {
     'name': 'JavaScript'
@@ -62,10 +63,12 @@ export default function AboutMe(){
               
               <ContentContainer>
                 <div className="relative py-8 px-[min(10em,8%)]">
+                  { /* professional section (business) */ }
                   <section className="mb-8">
                     <div>
                       <h2 className='mb-4 font-bold text-3xl text-center'>Software Developer</h2>
                       <p className="mt-4 indent-4 text-xl">I graduated with a Bachelor&apos;s Degree in Computer Science in 2024, and have been working on expanding my knowledge and skills ever since. I have largely focused on Full Stack Web Development, however I also have experience with Game Development, Application Development, and Database Development.</p>
+                      <p className="mt-4 indent-4 text-xl">I began programming with Java in 2020 during my freshman coursework, and moved onto C++ next. After keeping it simple with these two languages, as well as HTML and CSS, I began learning React (before learning JavaScript) to create my Senior Project, my <Link href='/projects/music-tracker' className="font-bold underline hover:text-cyan-500">Music Tracker</Link></p>
                     </div>
                     <div className="mt-8 mx-auto w-fit">
                       <h3 className="text-xl text-center font-semibold">Skills and Technologies I&apos;ve learned:</h3>
@@ -88,19 +91,20 @@ export default function AboutMe(){
                     </div>
                   </section>
 
+                  { /* personal section (party) */ }
                   <section className="mb-8">
                     <h2 className="mb-4 font-bold text-3xl text-center">Personal</h2>
-                    <div className="flex flex-col md:flex-row">
-                      <div className="relative w-64 h-64">
+                    <div className=" text-xl flow-root">
+                      <div className="relative w-64 h-64 float-right border">
                         <Image src="/images/cat.jpg" alt="Photo of me doing stuff" fill sizes="256px" className="rounded-xl object-cover" />
                       </div>
 
-                      <div className="text-xl w-1/2 border">
-                        <p className="indent-4">I love to workout, read, play basketball and video games, and go hiking and biking. Recently, I flew (for the first time) to the Grand Teton National Park in Wyoming, and hiked about 30 miles across the 3 days I spent there. I loved every minute of it.</p>
-                        
-                        <div className="mt-8 mx-auto w-fit">
-                          <h3 className="font-semibold">Some of my favorite books I&apos;ve read so far:</h3>
-                          <ul className="list-disc w-[90%] mx-auto">
+                      <div>
+                        <p className="indent-4 mr-4">I love to workout, read, play basketball and video games, and go hiking and biking. Recently, I flew (for the first time) to the Grand Teton National Park in Wyoming, and hiked about 30 miles across the 3 days I spent there. I loved every minute of it.</p>
+
+                        <div className="w-fit mx-auto my-8">
+                          <h3 className="font-semibold text-2xl -indent-4">Some of my favorite books I&apos;ve read so far:</h3>
+                          <ul className="list-disc w-fit mx-auto">
                             <li><i>The Road</i> by Cormac McCarthy</li>
                             <li><i>One Flew Over the Cuckoos Nest</i> by Ken Kesey</li>
                             <li>Lowkey do I put an open book image as the background</li>
@@ -108,8 +112,12 @@ export default function AboutMe(){
                         </div>
                         
                       </div>
-
+                      
                     </div>
+
+                    <div className="mt-8 mx-auto w-fit">
+                          
+                        </div>
                     
                   </section>
                   
