@@ -72,7 +72,7 @@ export default function Home() {
 
   useEffect(() => {
     setVisibility(true)
-  }, [])
+  }, [setVisibility])
 
   return (
     <div className="h-full flex flex-col flex-1 items-center justify-center">

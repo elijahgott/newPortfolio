@@ -38,6 +38,8 @@ export default function NavBar(){
       <div className='pointer-events-none absolute top-4 left-4 bg-radial from-white/80 to-transparent to-75% h-4 w-4 rounded-2xl' />
       <div className='pointer-events-none absolute bottom-1 right-6 bg-radial from-white/80 to-transparent to-80% h-6 w-6 rounded-xl' />
       <div className='pointer-events-none absolute bottom-4 right-4 bg-radial from-white/80 to-transparent to-80% h-4 w-4 rounded-xl' />
+      {/* bottom blue glow */}
+      <div className="" />
 
       <nav className="flex flex-row space-x-8 items-center justify-center w-fit">
         {navItems.map(item => <NavItem key={item.name} name={item.name} linkTo={item.linkTo} imageSource={item.imageSource} />)}
