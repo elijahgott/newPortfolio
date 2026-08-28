@@ -20,6 +20,18 @@ const skillsAndTech = [
   {
     'name': 'React'
   },
+  {
+    'name': 'SQL'
+  },
+  {
+    'name': 'MongoDB'
+  },
+  {
+    'name': 'HTML / CSS'
+  },
+  {
+    'name': 'Git'
+  },
 ]
 
 function generateRandom(n: number){
@@ -57,7 +69,7 @@ export default function AboutMe(){
                     </div>
                     <div className="mt-8 mx-auto w-fit">
                       <h3 className="text-xl text-center font-semibold">Skills and Technologies I&apos;ve learned:</h3>
-                        <ul className="flex mx-auto">
+                        <ul className="flex flex-wrap justify-center mx-auto w-[min(90%,600px)]">
                           {skillsAndTech.map((item, i) => {
                             return (
                               <div key={i} className="w-fit m-2 skill-bubble" style={{
@@ -78,21 +90,27 @@ export default function AboutMe(){
 
                   <section className="mb-8">
                     <h2 className="mb-4 font-bold text-3xl text-center">Personal</h2>
-                    <div className="relative w-64 h-64 ml-8 float-right">
-                      <Image src="/images/cat.jpg" alt="Photo of me doing stuff" fill sizes="256px" className="rounded-xl object-cover" />
-                    </div>
-                    <div className="text-xl">
-                      <p className="indent-4">I love to workout, read, play basketball and video games, and go hiking and biking. Recently, I flew (for the first time) to the Grand Teton National Park in Wyoming, and hiked about 30 miles across the 3 days I spent there. I loved every minute of it.</p>
-                      <div className="mt-8 mx-auto w-fit">
-                        <h3 className="font-semibold">Some of my favorite books I&apos;ve read so far:</h3>
-                        <ul className="list-disc w-[90%] mx-auto">
-                          <li><i>The Road</i> by Cormac McCarthy</li>
-                          <li><i>One Flew Over the Cuckoos Nest</i> by Ken Kesey</li>
-                          <li>Lowkey do I put an open book image as the background</li>
-                        </ul>
+                    <div className="flex flex-col md:flex-row">
+                      <div className="relative w-64 h-64">
+                        <Image src="/images/cat.jpg" alt="Photo of me doing stuff" fill sizes="256px" className="rounded-xl object-cover" />
                       </div>
-                      
+
+                      <div className="text-xl w-1/2 border">
+                        <p className="indent-4">I love to workout, read, play basketball and video games, and go hiking and biking. Recently, I flew (for the first time) to the Grand Teton National Park in Wyoming, and hiked about 30 miles across the 3 days I spent there. I loved every minute of it.</p>
+                        
+                        <div className="mt-8 mx-auto w-fit">
+                          <h3 className="font-semibold">Some of my favorite books I&apos;ve read so far:</h3>
+                          <ul className="list-disc w-[90%] mx-auto">
+                            <li><i>The Road</i> by Cormac McCarthy</li>
+                            <li><i>One Flew Over the Cuckoos Nest</i> by Ken Kesey</li>
+                            <li>Lowkey do I put an open book image as the background</li>
+                          </ul>
+                        </div>
+                        
+                      </div>
+
                     </div>
+                    
                   </section>
                   
                 </div>
