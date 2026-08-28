@@ -30,7 +30,7 @@ export default function NavBar(){
   }
 
   return(
-    <div className={`${ isVisible ? 'opacity-100' : 'opacity-0'} absolute bottom-2 left-[50%] translate-x-[-50%] py-4 px-12 bg-zinc-300/15 backdrop-blur-md shadow-lg border-2 border-white/40 rounded-full transition-opacity`} onMouseOver={() => setVisibility(true)}>
+    <div className={`${ isVisible ? 'opacity-100' : 'opacity-0'} absolute bottom-2 left-[50%] translate-x-[-50%] py-2 md:py-4 px-6 md:px-12 bg-zinc-300/15 backdrop-blur-md w-full md:w-fit shadow-lg border-2 border-white/40 rounded-full transition-opacity`} onMouseOver={() => setVisibility(true)}>
       { /* inner border */}
       <div className="pointer-events-none absolute inset-0.5 rounded-full border border-white/20" />
       {/* shiny corners */}
@@ -41,7 +41,7 @@ export default function NavBar(){
       {/* bottom blue glow */}
       <div className="" />
 
-      <nav className="flex flex-row space-x-8 items-center justify-center w-fit">
+      <nav className="flex flex-row space-x-4 items-center justify-center w-full">
         {navItems.map(item => <NavItem key={item.name} name={item.name} linkTo={item.linkTo} imageSource={item.imageSource} />)}
         <MusicToggle />
         <VolumeDown />

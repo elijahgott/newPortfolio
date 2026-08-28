@@ -112,7 +112,7 @@ export default async function ProjectPage({params} : ProjectProps){
           </div>
           
           <ContentContainer>
-            <div className='w-full flex'>
+            <div className='w-full flex flex-col lg:flex-row'>
               <div className='relative w-full aspect-video'>
                 <Image src={project.imageSource} alt={project.name} fill className="rounded-2xl object-fill shadow-2xl border border-white" />
               </div>
