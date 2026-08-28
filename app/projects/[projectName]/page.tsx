@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Channel from '@/app/components/channel'
 import Bubble from '@/app/components/bubble'
 import ContentContainer from '@/app/components/contentContainer'
+import ProjectButton from '@/app/components/projectButton'
 
 interface ProjectProps{
   params: Promise<{
@@ -13,6 +14,8 @@ interface ProjectProps{
 const projects = {
   'workout-tracker': {
     'name': 'Workout Tracker',
+    'playLink': 'https://workouttrackerapp-13vl.onrender.com/',
+    'gitHubLink': 'https://github.com/elijahgott/workoutTrackerApp',
     'iconSource': '/channelIcons/workout-tracker-2.png',
     'imageSource': '/projectImages/workout-tracker.jpg',
     'description': 'My Workout Tracker app is a React app used to aid users in tracking their progress in the gym, which will lead to better, more efficient workouts. This is done by tracking each exercise in a workout. The user first creates a workout, like Leg Day, and then adds exercises to that workout, like Squats, and they can update the sets, reps, and weight they do each time they workout, which will help them to push themselves harder each time.',
@@ -21,6 +24,8 @@ const projects = {
   },
   'music-tracker': {
     'name': 'Music Tracker',
+    'playLink': 'https://musictracker-umnh.onrender.com/',
+    'gitHubLink': 'https://github.com/elijahgott/seniordesignproject',
     'iconSource': '/channelIcons/music-tracker.png',
     'imageSource': '/projectImages/music-tracker.jpg',
     'description': 'The main purpose of this project is to aid in tracking and rating albums you have listened to. However, there are plenty of other functions that naturally coincide with this purpose, such as an account system, creating lists (Top 5 Artists, Albums, etc) for each account, adding new albums and artists into the database, and more were needed for the basic functionality of the project.',
@@ -29,6 +34,8 @@ const projects = {
   },
   'script-launcher': {
     'name': 'Script Launcher',
+    'playLink': 'N/A',
+    'gitHubLink': 'https://github.com/elijahgott/scriptLauncher',
     'iconSource': '/images/cat.jpg',
     'imageSource': '/projectImages/script-launcher.jpg',
     'description': 'Simple script launcher built using Python and Tkinter. The user selects a script from a pre-defined list of scripts, and can either "Run" or "Loop" the selected script. This is the first Python project I\'ve worked on, and is quite small, but I believe it is a great introduction into what is possible with Python.',
@@ -37,6 +44,8 @@ const projects = {
   },
   'rss-feed': {
     'name': 'RSS Feed',
+    'playLink': 'https://rsswebsite.onrender.com/',
+    'gitHubLink': 'https://github.com/elijahgott/rssWebsite',
     'iconSource': '/channelIcons/rss-feed.png',
     'imageSource': '/projectImages/rss-feed.jpg',
     'description': 'My RSS feed is the smallest web app I\'ve created so far, because it is intended solely for my use. I decided not to include a database or user authentication, because I wanted this to be simple, and only used for checking news that I am interested in. I focused more on theming than I have in the past, limiting myself to only a few shades of green and creating all the art used throughout the website myself.',
@@ -45,6 +54,8 @@ const projects = {
   },
   'text-rpg': {
     'name': 'Text-Based RPG',
+    'playLink': 'N/A',
+    'gitHubLink': 'https://github.com/elijahgott/Simple-C-RPG',
     'iconSource': '/images/cat.jpg',
     'imageSource': '/projectImages/c-sharp-rpg.jpg',
     'description': 'This is a simple text-based RPG using C# and Visual Studio\'s UI elements. I followed a tutorial by Scott Lilly for this project, as I had never used C# and had barely worked on games prior to this project. This served as a step further into the world of game development and a refresher on Object Oriented programming, both of which I have come to really appreciate lately.',
@@ -53,6 +64,8 @@ const projects = {
   },
   '2d-platformer': {
     'name': '2D Platformer Demo',
+    'playLink': 'N/A',
+    'gitHubLink': 'https://github.com/elijahgott/2DPlatformerDemo',
     'iconSource': '/images/cat.jpg',
     'imageSource': '/projectImages/2d-platformer.jpg',
     'description': 'This is my first time really jumping into game development. This is still a work in progress, but I am using the Godot game engine with C# to make this simple game. I intend on it essentially being a Mario clone, but I have been enjoying adding other features that aren\'t present in the 2D Mario games as a way to experiment and learn. I have also been learning how to do pixel art for this game, and have made all of the assets myself.',
@@ -61,6 +74,8 @@ const projects = {
   },
   'default': {
     'name': 'NOT FOUND',
+    'playLink': 'N/A',
+    'gitHubLink': 'N/A',
     'iconSource': '/images/cat.jpg',
     'imageSource': '/images/cat.jpg',
     'description': 'Project not found.',
@@ -97,33 +112,54 @@ export default async function ProjectPage({params} : ProjectProps){
           </div>
           
           <ContentContainer>
-            <div className='relative float-left mr-4 my-2 w-[50%] aspect-video'>
-              <Image src={project.imageSource} alt={project.name} fill className="rounded-2xl object-fill shadow-2xl border border-white" />
-            </div>
+            <div className='w-full flex'>
+              <div className='relative w-full aspect-video'>
+                <Image src={project.imageSource} alt={project.name} fill className="rounded-2xl object-fill shadow-2xl border border-white" />
+              </div>
 
-            <div className='relative z-10'>
-              <p className='m-6 indent-2 text-xl'>{project.description}</p>
+              <div className='z-10 w-full'>
+                <p className='m-6 indent-2 text-xl'>{project.description}</p>
+              </div>
             </div>
+            
 
-            <div className='w-fit mt-4 mx-auto select-none clear-left'>
-              <Bubble type='text'>
-                <div className='p-4'>
-                  <h2 className='font-bold text-xl text-center'>Skills / Tech Used:</h2>
-                  <ul>
-                    {project.skills.map(skill => <li key={skill} className='text-center'>{skill}</li>)}
-                  </ul>
-                  {project.notes.length != 0 ?
-                    (
-                      project.notes.map((note, i) => <p key={i} className='mt-4 text-xs'>{note}</p>)
-                    )
-                    :
-                    (
-                      null
-                    )
-                  }
+            <div className="w-fit mx-auto mt-4 flex justify-center space-x-4">
+
+                <div className="flex w-48 aspect-square">
+                  <ProjectButton type='play' link={project.playLink} />
                 </div>
-              </Bubble>
+                
+                <div className="flex w-48 aspect-square">
+                  <ProjectButton type='github' link={project.gitHubLink} />
+                </div>
+
+                <div className='flex select-none'>
+                  <Bubble type='text'>
+                    <div className='flex my-auto w-full'>
+                      <div className='pr-8 [writing-mode:vertical-lr] [text-orientation:upright]'>
+                        <h2 className='text-2xl text-center text-white font-bold drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]'>SKILLS</h2>
+                      </div>
+
+                      <div className='w-full font-semibold text-nowrap flex flex-col'>
+                        <ul className='my-auto'>
+                          {project.skills.map(skill => <li key={skill} className='text-center'>{skill}</li>)}
+                        </ul>
+                        {project.notes.length != 0 ?
+                          (
+                            project.notes.map((note, i) => <p key={i} className='mt-4 text-xs'>{note}</p>)
+                          )
+                          :
+                          (
+                            null
+                          )
+                        }
+                      </div>
+                    </div>
+                  </Bubble>
+                </div>
+
             </div>
+            
           </ContentContainer>
         </main>
     </div>

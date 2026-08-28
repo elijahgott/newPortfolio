@@ -37,13 +37,13 @@ export default function Bubble({type, children}: BubbleProps){
       <div className='pointer-events-none absolute bottom-4 right-0 bg-radial from-white/80 to-transparent to-80% h-4 w-4 rounded-xl' />
       {type == 'title' ?
         (
-          <div className='flex items-center'>
+          <div className='flex items-center w-full'>
             {children}
           </div>
         )
         :
         (
-          <div className='flex flex-col items-center'>
+          <div className='flex flex-col items-center w-full'>
             {children}
           </div>
         )

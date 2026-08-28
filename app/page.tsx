@@ -82,6 +82,9 @@ export default function Home() {
           <h1 className="font-bold text-black dark:text-white">What i want</h1>
           <ul className="list-disc text-black dark:text-white">
             <li>dark / light mode toggle?</li>
+            <li>make nav disappear after a bit / reappear when mouse hover?</li>
+            <li>or add nav-sized padding to bottom of pages to ensure readable</li>
+
           </ul>
         </div>
       </div>
