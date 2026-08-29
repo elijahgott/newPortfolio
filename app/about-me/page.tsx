@@ -69,6 +69,7 @@ export default function AboutMe(){
                       <h2 className='mb-4 font-bold text-3xl text-center'>Software Developer</h2>
                       <p className="mt-4 indent-4 text-xl">I graduated with a Bachelor&apos;s Degree in Computer Science in 2024, and have been working on expanding my knowledge and skills ever since. I have largely focused on Full Stack Web Development, however I also have experience with Game Development, Application Development, and Database Development.</p>
                       <p className="mt-4 indent-4 text-xl">I began programming with Java in 2020 during my freshman coursework, and moved onto C++ next. After keeping it simple with these two languages, as well as HTML and CSS, I began learning React (before learning JavaScript) when I began creating my Senior Project, my <Link href='/projects/music-tracker' className="font-bold underline hover:text-cyan-500">Music Tracker</Link>, which I have since vastly improved after learning more about React and Web Design.</p>
+                      <p className="mt-4 indent-4 text-xl">After graduation in 2024, I have really focused on expanding my skillset in various ways. I have TAKEN COURSES ON JS AND PYTHON AND WHATNOT</p>
                     </div>
                     <div className="mt-8 mx-auto w-fit">
                       <h3 className="text-xl text-center font-semibold">Skills and Technologies I&apos;ve learned:</h3>
@@ -95,7 +96,7 @@ export default function AboutMe(){
                   <section className="mb-8">
                     <h2 className="mb-4 font-bold text-3xl text-center">Personal</h2>
                     <div className=" text-xl flow-root">
-                      <div className="relative w-64 h-64 float-right border">
+                      <div className="relative w-64 h-64 sm:mx-auto md:mx-0 md:ml-4 md:float-right">
                         <Image src="/images/cat.jpg" alt="Photo of me doing stuff" fill sizes="256px" className="rounded-xl object-cover" />
                       </div>
 
