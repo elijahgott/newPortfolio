@@ -75,12 +75,12 @@ export default function Home() {
   }, [setVisibility])
 
   return (
-    <div className="h-full flex flex-col flex-1 items-center justify-center">
-      <div className="flex w-full mb-[5%]">
-        <div className="w-[10%] pl-4 pt-4 mt-0 2xl:mt-4">
+    <div className="h-full flex flex-col flex-1 items-center">
+      <div className="flex w-full h-full mb-[5%]">
+        <div className="w-[10%] pl-4 pt-4 mt-0 h-full">
           <Channel name="Elijah" imageSource='/channelIcons/about-me.jpg' linkTo="about-me" />
         </div>
-        <main className="grid grid-cols-3 grid-rows-5 gap-6 w-[80%] pr-[10%] p-4
+        <main className="my-auto grid grid-cols-3 grid-rows-5 gap-6 w-[80%] h-fit pr-[10%] p-4
         md:grid-cols-5 md:grid-rows-3 md:gap-4 md:p-8
         lg:gap-8">
           {projects.map(c => {
