@@ -1,5 +1,7 @@
 import Bubble from "./bubble"
-import Image from "next/image"
+
+import GitHubIcon from '@mui/icons-material/GitHub';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 interface ProjectButtonProps{
   'type': string,
@@ -11,17 +13,17 @@ export default function ProjectButton({type, link}: ProjectButtonProps){
     <Bubble type="button">
       {type == 'play' ?
         (
-            <a href={link} target="_blank" className="w-full aspect-square rounded-2xl my-auto bg-linear-to-tl from-green-500 to-lime-400">
-              <div className="relative w-full h-full">
-                <Image src='/ui/play.png' alt='Visit Project Website' fill sizes='(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 20vw' className="rounded-xl object-contain" style={{'imageRendering': 'pixelated'}} />
+            <a href={link} target="_blank" className="w-full aspect-square rounded-2xl my-auto bg-linear-to-tl from-green-500/80 to-lime-400/80">
+              <div className="relative flex items-center justify-center w-full h-full">
+                <PlayArrowIcon sx={{ fontSize: 120, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))' }} className="text-white" />
               </div>
             </a>
         )
       :
         (
-          <a href={link} target="_blank" className="w-full aspect-square rounded-2xl my-auto bg-linear-to-tl from-zinc-300 to-white">
-            <div className="relative w-full h-full">
-              <Image src='/ui/github.png' alt='Visit Project GitHub Page' fill sizes='(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 20vw' className="rounded-xl object-contain" style={{'imageRendering': 'pixelated'}} />
+          <a href={link} target="_blank" className="w-full aspect-square rounded-2xl my-auto bg-linear-to-tl from-violet-600/80 to-fuchsia-400/80">
+            <div className="relative flex items-center justify-center w-full h-full">
+              <GitHubIcon sx={{ fontSize: 120, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))' }} className="text-black" />
             </div>
           </a>
         )

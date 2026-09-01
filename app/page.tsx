@@ -92,8 +92,7 @@ export default function Home() {
 
           <ul className="list-disc text-black dark:text-white">
             <li>dark / light mode toggle?</li>
-            <li>make nav disappear after a bit / reappear when mouse hover?</li>
-            <li>or add nav-sized padding to bottom of pages to ensure readable</li>
+            <li>fix issue where music turns off when going back to home page</li>
           </ul>
 
         </div>

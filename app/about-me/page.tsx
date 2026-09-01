@@ -4,6 +4,7 @@ import Link from "next/link"
 import Channel from "../components/channel"
 import Bubble from "../components/bubble"
 import ContentContainer from "../components/contentContainer"
+import HomeButton from "../components/homeButton"
 
 const skillsAndTech = [
   {
@@ -47,7 +48,7 @@ export default function AboutMe(){
   return(
     <div className="flex h-full overflow-hidden">
             <div className='w-[10%] shrink-0 pl-4 pt-4'>
-              <Channel name='Home' imageSource='/ui/back-arrow.png' linkTo='/' />
+              <HomeButton />
             </div>
     
             <main className="min-h-0 w-[80%] flex-1 overflow-y-auto p-8 pr-[10%]">
