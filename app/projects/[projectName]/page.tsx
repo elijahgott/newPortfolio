@@ -1,12 +1,9 @@
 import Image from 'next/image'
 
-import Channel from '@/app/components/channel'
 import Bubble from '@/app/components/bubble'
 import ContentContainer from '@/app/components/contentContainer'
 import ProjectButton from '@/app/components/projectButton'
-
-import HomeIcon from '@mui/icons-material/Home';
-import Link from 'next/link'
+import HomeButton from '@/app/components/homeButton'
 
 interface ProjectProps{
   params: Promise<{
@@ -100,11 +97,7 @@ export default async function ProjectPage({params} : ProjectProps){
     <div className="flex h-full overflow-hidden">
 
         <div className='w-[10%] shrink-0 pl-4 pt-4'>
-          <Link href='/' className='' >
-            <Bubble type=''>
-              <HomeIcon sx={{fontSize: 100}} />
-            </Bubble>
-          </Link>
+          <HomeButton />
         </div>
 
         <main className="min-h-0 w-[80%] flex-1 overflow-y-auto p-8 pr-[10%]">
