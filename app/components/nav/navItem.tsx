@@ -1,14 +1,16 @@
 import { playSound } from "@/app/utils/soundManager";
 import { useAudio } from "@/app/utils/audioContext";
-import Image from 'next/image'
+
+// icons
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import GitHubIcon from '@mui/icons-material/GitHub'
 
 interface NavItemProps{
   name: string;
   linkTo: string;
-  imageSource: string;
 }
 
-export default function NavItem({name, linkTo, imageSource}: NavItemProps){
+export default function NavItem({name, linkTo}: NavItemProps){
   const { audioUnlocked } = useAudio()
   return (
     <a href={linkTo} target="_blank"
@@ -26,7 +28,11 @@ export default function NavItem({name, linkTo, imageSource}: NavItemProps){
     hover:before:scale-100 hover:before:opacity-100"
     data-name={name}>{
       <div className="max-w-20 aspect-square">
-        <Image src={imageSource} alt={name} width={200} height={200} style={{'imageRendering': 'pixelated'}} />
+        { name === 'Elijah Gott | LinkedIn' ?
+          <LinkedInIcon sx={{fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))'}} className="text-blue-500"/>
+          :
+          <GitHubIcon sx={{fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))'}} className="text-black"/>
+        }
       </div>
     }</a>
   )
