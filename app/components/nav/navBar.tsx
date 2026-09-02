@@ -8,10 +8,6 @@ import VolumeDown from './volumeDown'
 import { useNav } from "@/app/utils/navContext"
 import { usePathname } from "next/navigation"
 
-// icons
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import GitHubIcon from '@mui/icons-material/GitHub'
-
 const navItems = [
   {
     name: 'Elijah Gott | LinkedIn',

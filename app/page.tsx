@@ -35,36 +35,6 @@ const projects = [
     'linkTo': '/projects/2d-platformer',
     'imageSource': '/channelIcons/godot-2d-platformer.png',
   },
-  {
-    'name': 'Workout Tracker',
-    'linkTo': '/projects/workout-tracker',
-    'imageSource': '/channelIcons/workout-tracker-2.png',
-  },
-  {
-    'name': 'Music Tracker',
-    'linkTo': '/projects/music-tracker',
-    'imageSource': '/channelIcons/music-tracker.png',
-  },
-  {
-    'name': 'Script Launcher',
-    'linkTo': '/projects/script-launcher',
-    'imageSource': '/channelIcons/script-launcher.png',
-  },
-  {
-    'name': 'RSS Feed',
-    'linkTo': '/projects/rss-feed',
-    'imageSource': '/channelIcons/rss-feed.png',
-  },
-  {
-    'name': 'Text-Based RPG',
-    'linkTo': '/projects/text-rpg',
-    'imageSource': '/channelIcons/c-sharp-rpg.png',
-  },
-  {
-    'name': '2D Platformer Demo',
-    'linkTo': '/projects/2d-platformer',
-    'imageSource': '/channelIcons/godot-2d-platformer.png',
-  },
 ]
 
 export default function Home() {

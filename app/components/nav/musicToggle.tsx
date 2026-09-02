@@ -8,6 +8,7 @@ import MusicOffIcon from '@mui/icons-material/MusicOff';
 export default function MusicToggle(){
   const { isPlaying, toggleMusic } = useMusic()
   const { audioUnlocked, toggleAudio } = useAudio()
+
   return (
     <button
     onMouseEnter={() => {

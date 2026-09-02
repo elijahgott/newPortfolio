@@ -5,10 +5,13 @@ type AudioContextType = {
   audioUnlocked: boolean;
   enableAudio: () => void;
   disableAudio: () => void;
+  setAudio: (bool: boolean) => void;
   toggleAudio: () => void;
 }
 
 const AudioContext = createContext<AudioContextType | null>(null)
+
+console.log("AUDIO PROVIDER CREATED");
 
 export function AudioProvider({children}: {children: React.ReactNode}){
   const [audioUnlocked, setAudioUnlocked] = useState(false)
@@ -19,6 +22,10 @@ export function AudioProvider({children}: {children: React.ReactNode}){
 
   const disableAudio = () => {
     setAudioUnlocked(false)
+  }
+
+  const setAudio = (bool: boolean) => {
+    setAudioUnlocked(bool)
   }
 
   const toggleAudio = () => {
@@ -36,6 +43,7 @@ export function AudioProvider({children}: {children: React.ReactNode}){
         audioUnlocked,
         enableAudio,
         disableAudio,
+        setAudio,
         toggleAudio
       }}
       >
