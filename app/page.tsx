@@ -4,6 +4,7 @@ import Channel from "./components/channel";
 import DarkModeToggle from "./components/darkModeToggle";
 
 import { useNav } from "./utils/navContext";
+import { useTheme } from "./utils/themeContext";
 
 const projects = [
   {
@@ -39,6 +40,8 @@ const projects = [
 ]
 
 export default function Home() {
+  const { isLight } = useTheme()
+
   const { setVisibility } = useNav()
 
   useEffect(() => {
@@ -46,7 +49,8 @@ export default function Home() {
   }, [setVisibility])
 
   return (
-    <div className="h-full flex flex-col flex-1 items-center">
+    <div className={`rounded-2xl h-full flex flex-col flex-1 items-center bg-linear-70 ${isLight ? 'from-zinc-300 to-white' : 'from-zinc-900 to-zinc-600'} transition-colors duration-500`}> { /* className={` relative mx-auto my-auto w-full max-w-[1920px] sm:h-full md:h-[80vh] lg:h-[84vh] min-h-[65vh] max-h-270
+                bg-linear-70 ${isLight ? 'from-zinc-300 to-white' : 'from-zinc-900 to-zinc-600'}`} */ }
       <div className="flex w-full h-full mb-[5%]">
         <div className="w-[10%] pl-4 pt-4 mt-0 h-full">
           <Channel name="Elijah" imageSource='/channelIcons/about-me.jpg' linkTo="about-me" />

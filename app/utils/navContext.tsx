@@ -31,7 +31,7 @@ export function useNav(){
   const context = useContext(NavContext)
 
   if(!context){
-    throw new Error('useMusic must be used inside MusicProvider')
+    throw new Error('useNav must be used inside NavProvider')
   }
   return context
 }

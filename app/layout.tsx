@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "./utils/themeContext";
 import { MusicProvider } from "./utils/musicContext";
 import { AudioProvider } from "./utils/audioContext";
 import { NavProvider } from "./utils/navContext"
@@ -28,18 +29,19 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="h-full flex flex-col font-sans bg-black
-      dark:bg-gray-900 dark:bg-linear-70 dark:from-gray-900 dark:to-black">
-        <AudioProvider>
-          <MusicProvider>
-            <NavProvider>
-              <div className="relative mx-auto my-auto w-full max-w-[1920px] sm:h-full md:h-[80vh] lg:h-[84vh] min-h-[65vh] max-h-270 bg-linear-70 from-zinc-300 to-white rounded-2xl">
-                {children}
-                <NavBar />
-              </div>
-            </NavProvider>
-          </MusicProvider>
-        </AudioProvider>
+      <body className="h-full flex flex-col font-sans bg-black">
+        <ThemeProvider>
+          <AudioProvider>
+            <MusicProvider>
+              <NavProvider>
+                <div className='relative mx-auto my-auto w-full max-w-[1920px] sm:h-full md:h-[80vh] lg:h-[84vh] min-h-[65vh] max-h-270'>
+                  {children}
+                  <NavBar />
+                </div>
+              </NavProvider>
+            </MusicProvider>
+          </AudioProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
