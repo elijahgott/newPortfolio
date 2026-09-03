@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 
 import Anchor from "../components/Anchor"
 import Bubble from "../components/bubble"

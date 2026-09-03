@@ -1,6 +1,7 @@
 'use client'
 import { useEffect } from "react";
 import Channel from "./components/channel";
+import DarkModeToggle from "./components/darkModeToggle";
 
 import { useNav } from "./utils/navContext";
 
@@ -57,7 +58,8 @@ export default function Home() {
             return (<Channel key={c.name} name={c.name} imageSource={c.imageSource} linkTo={c.linkTo} />)
           })}
         </main>
-        <div className="w-[10%]">
+        <div className="w-[10%] pr-4 pt-4 mt-0 h-full">
+          <DarkModeToggle />
           <h1 className="font-bold text-black dark:text-white">What i want</h1>
 
           <ul className="list-disc text-black dark:text-white">
