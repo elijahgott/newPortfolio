@@ -62,7 +62,6 @@ export default function Home() {
 
           <ul className="list-disc text-black dark:text-white">
             <li>dark / light mode toggle?</li>
-            <li>fix issue where music turns off when going back to home page</li>
           </ul>
 
         </div>

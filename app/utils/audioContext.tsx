@@ -11,8 +11,6 @@ type AudioContextType = {
 
 const AudioContext = createContext<AudioContextType | null>(null)
 
-console.log("AUDIO PROVIDER CREATED");
-
 export function AudioProvider({children}: {children: React.ReactNode}){
   const [audioUnlocked, setAudioUnlocked] = useState(false)
 
