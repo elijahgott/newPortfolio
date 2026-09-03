@@ -67,7 +67,7 @@ export default function Home() {
           <h1 className="font-bold text-black dark:text-white">What i want</h1>
 
           <ul className="list-disc text-black dark:text-white">
-            <li>dark / light mode toggle?</li>
+            <li>improve all components dark mode variants</li>
           </ul>
 
         </div>
