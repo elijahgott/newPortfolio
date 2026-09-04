@@ -1,4 +1,5 @@
 'use client'
+import { useTheme } from '../utils/themeContext';
 import { playSound } from '../utils/soundManager';
 import { useAudio } from '../utils/audioContext';
 import Link from 'next/link'
@@ -12,6 +13,7 @@ interface ChannelProps{
 
 export default function Channel({name, imageSource, linkTo}: ChannelProps){
   const {audioUnlocked} = useAudio()
+  const {isLight} = useTheme()
 
   return(
     <Link className='block w-full' href={linkTo}
@@ -35,7 +37,7 @@ export default function Channel({name, imageSource, linkTo}: ChannelProps){
         </div>
 
         { /* top shiny */}
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/2 rounded-t-2xl bg-linear-to-b from-white/40 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/2 rounded-t-2xl bg-linear-to-b from-white/30 to-transparent" />
         { /* inner border */}
         <div className="pointer-events-none absolute inset-0.5 rounded-[calc(var(--radius-2xl)-2px)] border border-white/20" />
         {/* shiny corners */}
@@ -43,7 +45,7 @@ export default function Channel({name, imageSource, linkTo}: ChannelProps){
         <div className='pointer-events-none absolute top-4 left-0 bg-radial from-white/80 to-transparent to-75% h-4 w-4 rounded-2xl' />
         <div className='pointer-events-none absolute bottom-0 right-0 bg-radial from-white/80 to-transparent to-80% h-6 w-6 rounded-xl' />
         <div className='pointer-events-none absolute bottom-4 right-0 bg-radial from-white/80 to-transparent to-80% h-4 w-4 rounded-xl' />
-        <p className='text-center text-white font-bold drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]'>{name}</p>
+        <p className={`text-white text-center align-middle font-bold ${isLight ? 'drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]' : 'drop-shadow-[0_0_4px_rgba(255,255,255,0.5)]'}`}>{name}</p>
       </div>
     </Link>
   )

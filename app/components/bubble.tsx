@@ -1,4 +1,5 @@
 'use client'
+import { useTheme } from "../utils/themeContext";
 import { useAudio } from "../utils/audioContext";
 import { playSound } from '../utils/soundManager';
 
@@ -9,6 +10,7 @@ interface BubbleProps{
 
 export default function Bubble({type, children}: BubbleProps){
   const {audioUnlocked} = useAudio()
+  const { isLight } = useTheme()
 
   return (
     <div className="select-none flex p-4 w-full relative rounded-2xl bg-zinc-300/15 backdrop-blur-md shadow-lg overflow-hidden border-2 border-white/40
@@ -31,10 +33,10 @@ export default function Bubble({type, children}: BubbleProps){
       { /* inner border */}
       <div className="pointer-events-none absolute inset-0.5 rounded-[calc(var(--radius-2xl)-2px)] border border-white/20" />
       {/* shiny corners */}
-      <div className='pointer-events-none absolute top-0 left-0 bg-radial from-white/80 to-transparent to-75% h-6 w-6 rounded-2xl' />
-      <div className='pointer-events-none absolute top-4 left-0 bg-radial from-white/80 to-transparent to-75% h-4 w-4 rounded-2xl' />
-      <div className='pointer-events-none absolute bottom-0 right-0 bg-radial from-white/80 to-transparent to-80% h-6 w-6 rounded-xl' />
-      <div className='pointer-events-none absolute bottom-4 right-0 bg-radial from-white/80 to-transparent to-80% h-4 w-4 rounded-xl' />
+      <div className={`pointer-events-none absolute top-0 left-0 bg-radial to-75% h-6 w-6 rounded-2xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
+      <div className={`pointer-events-none absolute top-4 left-0 bg-radial to-75% h-4 w-4 rounded-2xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
+      <div className={`pointer-events-none absolute bottom-0 right-0 bg-radial to-transparent to-80% h-6 w-6 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
+      <div className={`pointer-events-none absolute bottom-4 right-0 bg-radial to-transparent to-80% h-4 w-4 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
       {type == 'title' ?
         (
           <div className='flex items-center w-full'>

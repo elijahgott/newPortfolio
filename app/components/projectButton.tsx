@@ -1,3 +1,7 @@
+'use client'
+
+import { useTheme } from "../utils/themeContext";
+
 import Bubble from "./bubble"
 
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -9,13 +13,14 @@ interface ProjectButtonProps{
 }
 
 export default function ProjectButton({type, link}: ProjectButtonProps){
+  const { isLight } = useTheme()
   return(
     <Bubble type="button">
       {type == 'play' ?
         (
-            <a href={link} target="_blank" className="w-full aspect-square rounded-2xl my-auto bg-linear-to-tl from-green-500/80 to-lime-400/80">
-              <div className="relative flex items-center justify-center w-full h-full">
-                <PlayArrowIcon sx={{ fontSize: 120, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))' }} className="text-white" />
+            <a href={link} target="_blank" className="w-full aspect-square my-auto">
+              <div className="relative flex items-center justify-center w-full h-full bg-linear-to-tl from-green-500/80 to-lime-400/80 rounded-2xl">
+                <PlayArrowIcon sx={{ fontSize: 120, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))' }} className="text-white"/>
               </div>
             </a>
         )

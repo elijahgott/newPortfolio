@@ -1,3 +1,6 @@
+'use client'
+import { useTheme } from "../utils/themeContext"
+
 import Image from "next/image"
 
 import Anchor from "../components/Anchor"
@@ -47,8 +50,10 @@ function generateDuration(){
 }
 
 export default function AboutMe(){
+  const {isLight} = useTheme()
+
   return(
-    <div className="flex h-full overflow-hidden">
+    <div className={`rounded-2xl flex h-full overflow-hidden  bg-linear-70 ${isLight ? 'from-zinc-300 to-white' : 'from-zinc-900 to-zinc-700'}`}>
             <div className='w-[10%] shrink-0 pl-4 pt-4'>
               <HomeButton />
             </div>
@@ -61,8 +66,8 @@ export default function AboutMe(){
                     <Image src="/channelIcons/about-me.jpg" alt="Photo of me (Elijah Gott)" fill className="rounded-xl object-contain" />
                   </div>
                   <div className="flex flex-col gap-1 h-fit ml-4">
-                    <h1 className='text-5xl text-center text-white font-bold drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]'>Elijah Gott</h1>
-                    <h2 className="text-xl text-zinc-600 font-semibold">Software Developer</h2>
+                    <h1 className={`text-5xl text-center text-white font-bold ${ isLight ? 'drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]' : 'drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]'}`} >Elijah Gott</h1>
+                    <h2 className={`text-xl font-semibold ${ isLight ? 'text-zinc-600' : 'text-zinc-400'}`} >Software Developer</h2>
                   </div>
                 </Bubble>
               </div>

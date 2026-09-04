@@ -49,8 +49,7 @@ export default function Home() {
   }, [setVisibility])
 
   return (
-    <div className={`rounded-2xl h-full flex flex-col flex-1 items-center bg-linear-70 ${isLight ? 'from-zinc-300 to-white' : 'from-zinc-900 to-zinc-600'} transition-colors duration-500`}> { /* className={` relative mx-auto my-auto w-full max-w-[1920px] sm:h-full md:h-[80vh] lg:h-[84vh] min-h-[65vh] max-h-270
-                bg-linear-70 ${isLight ? 'from-zinc-300 to-white' : 'from-zinc-900 to-zinc-600'}`} */ }
+    <div className={`rounded-2xl h-full flex flex-col flex-1 items-center bg-linear-70 ${isLight ? 'from-zinc-300 to-white' : 'from-zinc-900 to-zinc-700'} transition-colors duration-500`}>
       <div className="flex w-full h-full mb-[5%]">
         <div className="w-[10%] pl-4 pt-4 mt-0 h-full">
           <Channel name="Elijah" imageSource='/channelIcons/about-me.jpg' linkTo="about-me" />
@@ -64,10 +63,12 @@ export default function Home() {
         </main>
         <div className="w-[10%] pr-4 pt-4 mt-0 h-full">
           <DarkModeToggle />
-          <h1 className="font-bold text-black dark:text-white">What i want</h1>
+          <h1 className="mt-8 font-bold text-black dark:text-white">What i want</h1>
 
           <ul className="list-disc text-black dark:text-white">
-            <li>improve all components dark mode variants</li>
+            <li>add animation for switching between dark/light modes</li>
+            <li>make project play / github button icons gradients, maybe round buttons</li>
+            <li>somehow animate background to have items floating around</li>
           </ul>
 
         </div>

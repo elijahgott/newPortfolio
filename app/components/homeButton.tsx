@@ -23,10 +23,8 @@ export default function HomeButton(){
             playSound('click')
           }
         }}>
-        {/* top shiny */}
-        {/* <div className='w-full h-[50%] pointer-events-none absolute left-0 top-0 rounded-t-lg bg-linear-to-b from-white/50' /> */}
         { /* inner border */}
-        <div className="pointer-events-none absolute inset-0.5 rounded-[calc(var(--radius-2xl)-2px)] border border-white/20" />
+        <div className="pointer-events-none absolute inset-0.5 rounded-full border border-white/20" />
         {/* shiny corners */}
         <div className='pointer-events-none absolute top-4 left-6 bg-radial from-white/80 to-transparent to-75% h-6 w-6 rounded-2xl' />
         <div className='pointer-events-none absolute top-8 left-4 bg-radial from-white/80 to-transparent to-75% h-4 w-4 rounded-2xl' />
