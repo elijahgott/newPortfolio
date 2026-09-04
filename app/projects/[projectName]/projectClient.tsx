@@ -110,27 +110,28 @@ export default function ProjectClient({projectName}: {projectName: string}){
             
             <ContentContainer>
               <div className='w-full flex flex-col lg:flex-row'>
-                <div className='relative w-full aspect-video'>
-                  <Image src={project.imageSource} alt={project.name} fill className="rounded-2xl object-fill shadow-2xl border-2 border-white/30" />
-                </div>
-  
-                <div className='z-10 w-full'>
-                  <p className='m-6 indent-2 text-xl'>{project.description}</p>
-                </div>
-              </div>
-              
-  
-              <div className="w-fit mx-auto mt-4 flex justify-center space-x-4">
-  
-                  <div className="flex w-48 aspect-square">
-                    <ProjectButton type='play' link={project.playLink} />
+                <div className='ml-0 mr-auto w-full lg:w-1/2 float-left'>
+                  <div className='relative w-full aspect-video'>
+                    <Image src={project.imageSource} alt={project.name} fill className="rounded-2xl object-fill shadow-2xl border-2 border-white/30" />
+                  </div>
+
+                  <div className='flex justify-center gap-2 mt-2'>
+                    <div className="flex w-32 aspect-square">
+                      <ProjectButton type='play' link={project.playLink} />
+                    </div>
+                    
+                    <div className="flex w-32 aspect-square">
+                      <ProjectButton type='github' link={project.gitHubLink} />
+                    </div>
                   </div>
                   
-                  <div className="flex w-48 aspect-square">
-                    <ProjectButton type='github' link={project.gitHubLink} />
-                  </div>
+                </div>
+                
   
-                  <div className='flex select-none'>
+                <div className='w-full lg:w-1/2 ml-auto mr-0 z-40'>
+                  <p className='m-6 indent-2 text-xl'>{project.description}</p>
+
+                  <div className='w-fit max-w-full mx-auto flex select-none'>
                     <Bubble type='text'>
                       <div className='flex my-auto w-full'>
                         <div className='pr-8 [writing-mode:vertical-lr] [text-orientation:upright]'>
@@ -143,7 +144,7 @@ export default function ProjectClient({projectName}: {projectName: string}){
                           </ul>
                           {project.notes.length != 0 ?
                             (
-                              project.notes.map((note, i) => <p key={i} className='mt-4 text-xs'>{note}</p>)
+                              project.notes.map((note, i) => <p key={i} className={`mt-4 text-xs text-wrap text-center ${isLight ? 'text-zinc-600' : 'text-zinc-300'} `}>{note}</p>)
                             )
                             :
                             (
@@ -154,6 +155,12 @@ export default function ProjectClient({projectName}: {projectName: string}){
                       </div>
                     </Bubble>
                   </div>
+                </div>
+              </div>
+              
+  
+              <div className="w-fit mx-auto mt-4 flex justify-center space-x-4">
+                  
   
               </div>
               

@@ -63,12 +63,14 @@ export default function Home() {
         </main>
         <div className="w-[10%] pr-4 pt-4 mt-0 h-full">
           <DarkModeToggle />
-          <h1 className="mt-8 font-bold text-black dark:text-white">What i want</h1>
+          <h1 className="mt-8 font-bold text-black">What i want</h1>
 
-          <ul className="list-disc text-black dark:text-white">
-            <li>make project play / github button icons gradients, maybe round buttons</li>
+          <ul className="list-disc text-black">
             <li>somehow animate background to have items floating around</li>
             <li>add more swag</li>
+            <li>especially to about me, that page needs some sauce bad</li>
+            <li>add more to project pages, esp description</li>
+            <li>make channels more responsive, they break when too small</li>
           </ul>
 
         </div>
