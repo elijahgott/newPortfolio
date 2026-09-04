@@ -59,14 +59,14 @@ function Button({isHidden, setIsHidden}: {isHidden: boolean, setIsHidden: (bool:
           {isHidden ?
             (
               <>
-                <p>More</p>
-                <KeyboardArrowDownIcon />
+                <p className="text-white font-bold drop-shadow-[0_0_4px_rgba(0,0,0,0.8)] text-nowrap">More</p>
+                <KeyboardArrowDownIcon sx={{filter: 'drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.8))'}} className="text-white" />
               </>
             ) : 
             (
               <>
-                <p>Less</p>
-                <KeyboardArrowUpIcon />
+                <p className="text-white font-bold drop-shadow-[0_0_4px_rgba(0,0,0,0.8)] text-nowrap">Less</p>
+                <KeyboardArrowUpIcon sx={{filter: 'drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.8))'}} className="text-white" />
               </>
             )
           }
