@@ -66,9 +66,9 @@ export default function Home() {
           <h1 className="mt-8 font-bold text-black dark:text-white">What i want</h1>
 
           <ul className="list-disc text-black dark:text-white">
-            <li>add animation for switching between dark/light modes</li>
             <li>make project play / github button icons gradients, maybe round buttons</li>
             <li>somehow animate background to have items floating around</li>
+            <li>add more swag</li>
           </ul>
 
         </div>

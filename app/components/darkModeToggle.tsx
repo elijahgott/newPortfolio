@@ -39,8 +39,8 @@ export default function DarkModeToggle(){
         <div className={`pointer-events-none absolute bottom-8 right-4 bg-radial to-80% h-4 w-4 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
 
         <div className='relative flex items-center justify-center w-full aspect-square overflow-hidden rounded-full'>
-          <LightModeIcon sx={{fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))', transition: 'translate 500ms ease-in-out, opacity 500ms ease-in-out',}} className={`text-amber-400 absolute ${isLight ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`} />
-          <DarkModeIcon sx={{fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))', transition: 'translate 500ms ease-in-out, opacity 500ms ease-in-out',}} className={`text-indigo-600 absolute ${isLight ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`} />
+          <LightModeIcon sx={{fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))', transition: 'translate 400ms ease-in-out, opacity 500ms ease-in-out',}} className={`text-amber-400 absolute ${isLight ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`} />
+          <DarkModeIcon sx={{fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))', transition: 'translate 400ms ease-in-out, opacity 500ms ease-in-out',}} className={`text-indigo-600 absolute ${isLight ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`} />
         </div>
     </button>
   )
