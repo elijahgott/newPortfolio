@@ -31,16 +31,16 @@ export default function DarkModeToggle(){
         { /* inner border */}
         <div className="pointer-events-none absolute inset-0.5 rounded-full border border-white/20" />
         {/* shiny corners */}
-        <div className='pointer-events-none absolute top-4 left-6 bg-radial from-white/80 to-transparent to-75% h-6 w-6 rounded-2xl' />
-        <div className='pointer-events-none absolute top-8 left-4 bg-radial from-white/80 to-transparent to-75% h-4 w-4 rounded-2xl' />
-        <div className='pointer-events-none absolute bottom-4 right-6 bg-radial from-white/80 to-transparent to-80% h-6 w-6 rounded-xl' />
-        <div className='pointer-events-none absolute bottom-8 right-4 bg-radial from-white/80 to-transparent to-80% h-4 w-4 rounded-xl' />
+        <div className={`pointer-events-none absolute top-4 left-6 bg-radial to-75% h-6 w-6 rounded-2xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
+        <div className={`pointer-events-none absolute top-8 left-4 bg-radial to-75% h-4 w-4 rounded-2xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
+        <div className={`pointer-events-none absolute bottom-4 right-6 bg-radial to-80% h-6 w-6 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
+        <div className={`pointer-events-none absolute bottom-8 right-4 bg-radial to-80% h-4 w-4 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
 
         <div className='flex flex-col items-center w-full transition-all duration-500'>
           {isLight ?
-            <LightModeIcon sx={{fontSize: 80}} className="text-white drop-shadow-[0_0_8px_rgba(0,0,0,0.8)]" />
+            <LightModeIcon sx={{fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))'}} className="text-amber-300" />
             :
-            <DarkModeIcon sx={{fontSize: 80}} className="text-white drop-shadow-[0_0_8px_rgba(0,0,0,0.8)]" />
+            <DarkModeIcon sx={{fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))'}} className="text-indigo-600" />
           }
         </div>
     </button>

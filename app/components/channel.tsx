@@ -37,14 +37,15 @@ export default function Channel({name, imageSource, linkTo}: ChannelProps){
         </div>
 
         { /* top shiny */}
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/2 rounded-t-2xl bg-linear-to-b from-white/30 to-transparent" />
+        <div className={`pointer-events-none absolute inset-x-0 top-0 h-1/2 rounded-t-2xl bg-linear-to-b ${ isLight ? 'from-white/60' : 'from-white/30' }`} />
         { /* inner border */}
         <div className="pointer-events-none absolute inset-0.5 rounded-[calc(var(--radius-2xl)-2px)] border border-white/20" />
         {/* shiny corners */}
-        <div className='pointer-events-none absolute top-0 left-0 bg-radial from-white/80 to-transparent to-75% h-6 w-6 rounded-2xl' />
-        <div className='pointer-events-none absolute top-4 left-0 bg-radial from-white/80 to-transparent to-75% h-4 w-4 rounded-2xl' />
-        <div className='pointer-events-none absolute bottom-0 right-0 bg-radial from-white/80 to-transparent to-80% h-6 w-6 rounded-xl' />
-        <div className='pointer-events-none absolute bottom-4 right-0 bg-radial from-white/80 to-transparent to-80% h-4 w-4 rounded-xl' />
+        <div className={`pointer-events-none absolute top-2 left-2 bg-radial to-75% h-6 w-6 rounded-2xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
+        <div className={`pointer-events-none absolute top-6 left-1 bg-radial to-75% h-4 w-4 rounded-2xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
+        <div className={`pointer-events-none absolute bottom-2 right-2 bg-radial to-80% h-6 w-6 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
+        <div className={`pointer-events-none absolute bottom-6 right-1 bg-radial to-80% h-4 w-4 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
+
         <p className={`text-white text-center align-middle font-bold ${isLight ? 'drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]' : 'drop-shadow-[0_0_4px_rgba(255,255,255,0.5)]'}`}>{name}</p>
       </div>
     </Link>
