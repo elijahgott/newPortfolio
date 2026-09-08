@@ -87,14 +87,14 @@ export default function AboutMe(){
                     {/* about me section */}
                     <div className="flex flex-col lg:flex-row">
                       <div className="flex flex-col w-full lg:w-1/2">
-                        <h2 className='font-bold text-[3rem]'>About Me</h2>
-                        <p className="w-full mt-4 indent-4 text-xl mr-2 h-fit">In 2020 I enrolled at Purdue for Computer Engineering, and in 2024 I graduated from Purdue with a Bachelor&apos;s Degree in Computer Science. Ever since my enrollment, I have been busy expanding my technical skills and knowledge. Since graduation, I have largely focused my efforts on Full Stack Web Development, having developed multiple full stack web applications, however I also have extensive experience with Database, Application, and Game Development.</p>
+                        <h2 className='font-bold text-[3rem] mb-4'>About Me</h2>
+                        <p className="w-full indent-4 text-xl mr-2 h-fit">In 2020 I enrolled at Purdue for Computer Engineering, and in 2024 I graduated from Purdue with a Bachelor&apos;s Degree in Computer Science. Ever since my enrollment, I have been busy expanding my technical skills and knowledge. Since graduation, I have largely focused my efforts on Full Stack Web Development, having developed multiple full stack web applications, however I also have extensive experience with Database, Application, and Game Development.</p>
                       </div>
 
                       {/* skills section */}
-                      <div className="w-full lg:w-1/2">
-                        <h3 className="text-[2.5rem] text-center font-bold">Skills and Tech</h3>
-                        <ul className="mt-4 flex flex-wrap justify-center mx-auto w-[min(90%,600px)]">
+                      <div className="w-full lg:w-1/2 mt-2">
+                        <h3 className="text-[2.5rem] text-center font-bold mb-4">Skills and Tech</h3>
+                        <ul className="flex flex-wrap justify-center mx-auto w-[min(90%,600px)]">
                           {skillsAndTech.map((item, i) => {
                             return (
                               <div key={i} className="w-fit m-2 skill-bubble" style={{
@@ -123,28 +123,49 @@ export default function AboutMe(){
                   </section>
 
                   { /* personal section (party) */ }
-                  <section className="mb-8">
-                    <h2 className="mb-4 font-bold text-3xl text-center">Personal</h2>
-                    <div className=" text-xl flow-root">
-                      <div className="relative w-64 h-64 sm:mx-auto md:mx-0 md:ml-4 md:float-right">
-                        <Image src="/images/cat.jpg" alt="Photo of me doing stuff" fill sizes="256px" className="rounded-xl object-cover" />
-                      </div>
-
-                      <div>
-                        <p className="indent-4 mr-4">I love to workout, read, play basketball and video games, and go hiking and biking. Recently, I flew (for the first time) to the Grand Teton National Park in Wyoming, and hiked about 30 miles across the 3 days I spent there. I loved every minute of it.</p>
-
-                        <div className="w-fit mx-auto my-8">
-                          <h3 className="font-semibold text-2xl -indent-4">Some of my favorite books I&apos;ve read so far:</h3>
-                          <ul className="list-disc w-fit mx-auto">
-                            <li><i>The Road</i> by Cormac McCarthy</li>
-                            <li><i>One Flew Over the Cuckoos Nest</i> by Ken Kesey</li>
-                            <li>Lowkey do I put an open book image as the background</li>
-                          </ul>
+                  <section className="flex flex-col mb-8 text-xl border">
+                    <div className="flex flex-col-reverse lg:flex-row">
+                      <div className="flex flex-col w-full lg:w-1/2 ml-0 mr-auto border">
+                        <div className="relative w-64 h-64 mx-auto lg:mx-0 lg:ml-4 border">
+                          <Image src="/images/cat.jpg" alt="Photo of me doing stuff" fill sizes="256px" className="rounded-xl object-cover" />
                         </div>
-                        
+                        <div className="relative w-64 h-64 mx-auto lg:mx-0 lg:ml-auto lg:mr-0 border">
+                          <Image src="/images/cat.jpg" alt="Photo of me doing stuff" fill sizes="256px" className="rounded-xl object-cover" />
+                        </div>
+                        <div className="relative w-64 h-64 mx-auto lg:mx-0 lg:ml-4 border">
+                          <Image src="/images/cat.jpg" alt="Photo of me doing stuff" fill sizes="256px" className="rounded-xl object-cover" />
+                        </div>
                       </div>
-                      
+                      <div className="flex flex-col w-full lg:w-1/2 ml-auto mr-0">
+                        <h2 className='font-bold text-[3rem] mb-4'>Personal</h2>
+                        <p className="indent-4 mr-4">I love to workout, read, play basketball and video games, and go hiking and biking. Recently, I flew (for the first time) to the Grand Teton National Park in Wyoming, and hiked about 30 miles across the 3 days I spent there. I loved every minute of it.</p>
+                        <p className="mt-4">do i just put a bunch of pictures here? and arrange in cool way?</p>
+                      </div>
                     </div>
+                    
+
+                    <div className="w-fit mx-auto my-8 border">
+                      <h3 className="font-semibold text-2xl -indent-4">Some of my favorite books I&apos;ve read so far:</h3>
+                      <ul className="list-disc w-fit mx-auto">
+                        <li><i>The Road</i> by Cormac McCarthy</li>
+                        <li><i>One Flew Over the Cuckoos Nest</i> by Ken Kesey</li>
+                        <li>Lowkey do I put an open book image as the background</li>
+                      </ul>
+                    </div>
+
+                    <div className="w-fit mx-auto my-8 border">
+                      <h3 className="font-semibold text-2xl -indent-4">stuff to write about:</h3>
+                      <ul className="list-disc w-fit mx-auto">
+                        <li>drawing</li>
+                        <li>piano?</li>
+                        <li>biking</li>
+                        <li>lifting</li>
+                        <li>movies?</li>
+                      </ul>
+                    </div>
+                        
+                      
+                    
                     
                   </section>
                   
