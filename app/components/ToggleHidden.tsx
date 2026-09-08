@@ -16,7 +16,7 @@ export default function ToggleHidden({children}: ToggleHiddenProps){
 
   return(
     <div className="w-full">
-      <div className={`${isHidden ? 'max-h-0' : 'max-h-125'} overflow-hidden transition-all duration-300`}>
+      <div className={`${isHidden ? 'max-h-0' : 'max-h-300'} overflow-hidden transition-all duration-500`}>
         {children}
       </div>
 
