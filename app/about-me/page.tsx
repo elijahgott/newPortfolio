@@ -113,9 +113,15 @@ export default function AboutMe(){
                       </div>
                     </div>
                     <ToggleHidden>
-                        <div className='float-none mx-auto md:float-left relative w-64 aspect-square md:mr-4 md:ml-2 mt-4 shadow-lg rounded-xl border-2 border-transparent hover:scale-105 overflow-hidden transition-all duration-150'>
-                          <Image src="/images/about-me/self-image.jpg" alt="Photo of me at college graduation." fill className="object-cover" />
+                        <div className="float-none md:float-left w-min m-4">
+                          <Bubble type="image">
+                            <div className='overflow-hidden relative w-64 aspect-square md:mr-4 md:ml-2 mt-4 shadow-lg rounded-xl'>
+                              <Image src="/images/about-me/self-image.jpg" alt="Photo of me at college graduation." fill className="object-cover" />
+                            </div>
+                            <p className="mx-4 mt-2">The highest quality photo taken of me at graduation.</p>
+                          </Bubble>
                         </div>
+
                         <p className="mt-4 indent-4 text-xl">In 2020, I began my programming journey with Java during my freshman coursework, and moved onto C++ next. After learning the basics of these two languages, as well as HTML and CSS, I began learning React (before learning JavaScript) when I began creating my Senior Project, my <Anchor type="internal" linkTo="/projects/music-tracker">Music Tracker</Anchor> (which I have vastly improved after learning much more about React, Web Design, and Backend Development, and Database Development).</p>
                         <p className="mt-4 indent-4 text-xl">After graduation in 2024, I have focused on expanding my skillset in various ways. I have taken online courses on JavaScript, Python, Full-Stack Development, and more. Most of these courses have been from <Anchor type="external" linkTo="https://www.freecodecamp.org/">FreeCodeCamp</Anchor>, but the JavaScript course was through <Anchor type="external" linkTo="https://wesbos.com/">Wes Bos</Anchor> and the Full-Stack Development course was from <Anchor type="external" linkTo="https://fullstackopen.com/en/">Full Stack Open</Anchor>. After completion of most of the courses I&apos;ve taken, I created a project using the knowledge gained to help solidify and expand my understanding. For example, after completing the Full Stack Open course, I created my <Anchor type="internal" linkTo="/projects/workout-tracker">Workout Tracker</Anchor> using much of what I learned throughout the course.</p>
                       </ToggleHidden>
@@ -123,19 +129,34 @@ export default function AboutMe(){
                   </section>
 
                   { /* personal section (party) */ }
-                  <section className="flex flex-col mb-8 text-xl border">
+                  <section className="flex flex-col mt-16 mb-8 text-xl">
                     <div className="flex flex-col-reverse lg:flex-row">
-                      <div className="flex flex-col w-full lg:w-1/2 ml-0 mr-auto border">
-                        <div className="relative w-64 h-64 mx-auto lg:mx-0 lg:ml-4 border">
-                          <Image src="/images/cat.jpg" alt="Photo of me doing stuff" fill sizes="256px" className="rounded-xl object-cover" />
+                      { /* image gallery */ }
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        <div className="grid gap-4">
+                          <div className="relative w-full h-48">
+                            <Image src="/images/about-me/self-image.jpg" alt="Photo of me doing stuff" fill objectFit="cover" className="rounded-xl" />
+                          </div>
+                          <div className="relative w-64 h-80">
+                            <Image src="/images/about-me/self-image.jpg" alt="Photo of me doing stuff" fill objectFit="cover" className="rounded-xl" />
+                          </div>
+                          <div className="relative w-64 h-64 border">
+                            <Image src="/images/cat.jpg" alt="Photo of me doing stuff" fill sizes="256px" className="rounded-xl object-cover" />
+                          </div>
                         </div>
-                        <div className="relative w-64 h-64 mx-auto lg:mx-0 lg:ml-auto lg:mr-0 border">
-                          <Image src="/images/cat.jpg" alt="Photo of me doing stuff" fill sizes="256px" className="rounded-xl object-cover" />
-                        </div>
-                        <div className="relative w-64 h-64 mx-auto lg:mx-0 lg:ml-4 border">
-                          <Image src="/images/cat.jpg" alt="Photo of me doing stuff" fill sizes="256px" className="rounded-xl object-cover" />
+                        <div className="grid gap-4">
+                          <div className="relative w-64 h-64 border">
+                            <Image src="/images/cat.jpg" alt="Photo of me doing stuff" fill sizes="256px" className="rounded-xl object-cover" />
+                          </div>
+                          <div className="relative w-64 h-64 border">
+                            <Image src="/images/cat.jpg" alt="Photo of me doing stuff" fill sizes="256px" className="rounded-xl object-cover" />
+                          </div>
+                          <div className="relative w-64 h-80">
+                            <Image src="/images/about-me/self-image.jpg" alt="Photo of me doing stuff" fill objectFit="cover" className="rounded-xl" />
+                          </div>
                         </div>
                       </div>
+
                       <div className="flex flex-col w-full lg:w-1/2 ml-auto mr-0">
                         <h2 className='font-bold text-[3rem] mb-4'>Personal</h2>
                         <p className="indent-4 mr-4">I love to workout, read, play basketball and video games, and go hiking and biking. Recently, I flew (for the first time) to the Grand Teton National Park in Wyoming, and hiked about 30 miles across the 3 days I spent there. I loved every minute of it.</p>
