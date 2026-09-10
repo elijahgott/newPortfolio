@@ -98,8 +98,8 @@ export default function AboutMe(){
                           {skillsAndTech.map((item, i) => {
                             return (
                               <div key={i} className="w-fit m-2 skill-bubble" style={{
-                                "--float-x": `${generateRandom(4)}px`,
-                                "--float-y": `${generateRandom(4)}px`,
+                                "--float-x": `${generateRandom(8)}px`,
+                                "--float-y": `${generateRandom(8)}px`,
                                 "--float-duration": `${generateDuration()}s`
                                 } as React.CSSProperties}>
                                 <Bubble type="">
@@ -118,7 +118,7 @@ export default function AboutMe(){
                             <div className='overflow-hidden relative w-64 aspect-square md:mr-4 md:ml-2 mt-4 shadow-lg rounded-xl'>
                               <Image src="/images/about-me/self-image.jpg" alt="Photo of me at college graduation." fill className="object-cover" />
                             </div>
-                            <p className="mx-4 mt-2">The highest quality photo taken of me at graduation.</p>
+                            <p className={`mx-4 mt-2 ${isLight ? 'text-zinc-700' : 'text-zinc-200'}`}>The highest quality photo taken of me at graduation.</p>
                           </Bubble>
                         </div>
 
@@ -159,7 +159,8 @@ export default function AboutMe(){
 
                       <div className="flex flex-col w-full lg:w-1/2 ml-auto mr-0">
                         <h2 className='font-bold text-[3rem] mb-4'>Personal</h2>
-                        <p className="indent-4 mr-4">I love to workout, read, play basketball and video games, and go hiking and biking. Recently, I flew (for the first time) to the Grand Teton National Park in Wyoming, and hiked about 30 miles across the 3 days I spent there. I loved every minute of it.</p>
+                        <p className="indent-4 mr-4">When I&apos;m not coding, I try to stay away from the screen as much as possible. Some of my favorite ways to do this are by reading, working out, biking, and hiking. When I&apos;m feeling artsy, I also like to draw and play piano, although I am not great at either (yet).</p>
+                        <p className="indent-4 mt-4 mr-4">I recently visited the Grand Teton National Park in Wyoming, and was blown away by how beautiful it was. Over the few days I was there, I hiked about 30 miles, and gained approximately 5,000 feet in elevation across the different trails.</p>
                         <p className="mt-4">do i just put a bunch of pictures here? and arrange in cool way?</p>
                       </div>
                     </div>
@@ -173,21 +174,6 @@ export default function AboutMe(){
                         <li>Lowkey do I put an open book image as the background</li>
                       </ul>
                     </div>
-
-                    <div className="w-fit mx-auto my-8 border">
-                      <h3 className="font-semibold text-2xl -indent-4">stuff to write about:</h3>
-                      <ul className="list-disc w-fit mx-auto">
-                        <li>drawing</li>
-                        <li>piano?</li>
-                        <li>biking</li>
-                        <li>lifting</li>
-                        <li>movies?</li>
-                      </ul>
-                    </div>
-                        
-                      
-                    
-                    
                   </section>
                   
                 </div>
