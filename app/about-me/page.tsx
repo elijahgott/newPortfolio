@@ -130,29 +130,31 @@ export default function AboutMe(){
 
                   { /* personal section (party) */ }
                   <section className="flex flex-col mt-16 mb-8 text-xl">
-                    <div className="flex flex-col-reverse lg:flex-row">
+                    <div className="flex flex-col-reverse xl:flex-row">
+
                       { /* image gallery */ }
-                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                        <div className="grid gap-4">
-                          <div className="relative w-full h-48">
-                            <Image src="/images/about-me/self-image.jpg" alt="Photo of me doing stuff" fill objectFit="cover" className="rounded-xl" />
+                      <div className="flex flex-col justify-center w-full lg:w-1/2">
+                      <h2 className='cursor-default font-bold text-[3rem] mb-4 text-transparent'>Gallery</h2>
+                        <div className="grid grid-cols-2 justify-center-safe w-fit mx-auto gap-4">
+                          <div className="grid gap-4 w-fit h-fit my-auto mx-auto">
+                            <div className="relative w-64 h-48 rounded-xl shadow-lg">
+                              <Image src="/images/about-me/gallery/wyoming2.jpeg" alt="Surprise Lake at Grand Teton National Park" fill sizes="256px" className="rounded-xl object-cover" />
+                            </div>
+                            <div className="relative w-64 h-96 rounded-xl shadow-lg">
+                              <Image src="/images/about-me/gallery/wyoming3.jpeg" alt="Grand Teton Mountains and Lake" fill sizes="256px" className="rounded-xl object-cover" />
+                            </div>
+                            <div className="relative w-64 h-48 rounded-xl shadow-lg">
+                              <Image src="/images/about-me/gallery/wyoming1.jpeg" alt="Grand Teton Mountains" fill sizes="256px" className="rounded-xl object-cover" />
+                            </div>
                           </div>
-                          <div className="relative w-64 h-80">
-                            <Image src="/images/about-me/self-image.jpg" alt="Photo of me doing stuff" fill objectFit="cover" className="rounded-xl" />
-                          </div>
-                          <div className="relative w-64 h-64 border">
-                            <Image src="/images/cat.jpg" alt="Photo of me doing stuff" fill sizes="256px" className="rounded-xl object-cover" />
-                          </div>
-                        </div>
-                        <div className="grid gap-4">
-                          <div className="relative w-64 h-64 border">
-                            <Image src="/images/cat.jpg" alt="Photo of me doing stuff" fill sizes="256px" className="rounded-xl object-cover" />
-                          </div>
-                          <div className="relative w-64 h-64 border">
-                            <Image src="/images/cat.jpg" alt="Photo of me doing stuff" fill sizes="256px" className="rounded-xl object-cover" />
-                          </div>
-                          <div className="relative w-64 h-80">
-                            <Image src="/images/about-me/self-image.jpg" alt="Photo of me doing stuff" fill objectFit="cover" className="rounded-xl" />
+
+                          <div className="grid gap-4 w-fit h-fit my-auto mx-auto">
+                            <div className="relative w-64 h-96 rounded-xl shadow-lg">
+                              <Image src="/images/about-me/gallery/colorado1.jpeg" alt="Creek on a Colorado mountain." fill objectFit="cover" className="rounded-xl" />
+                            </div>
+                            <div className="relative w-64 h-48 rounded-xl shadow-lg">
+                              <Image src="/images/about-me/gallery/lake1.jpeg" alt="View from the lake." fill objectFit="cover" className="rounded-xl" />
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -166,7 +168,7 @@ export default function AboutMe(){
                     </div>
                     
 
-                    <div className="w-fit mx-auto my-8 border">
+                    <div className="w-fit mx-auto my-8">
                       <h3 className="font-semibold text-2xl -indent-4">Some of my favorite books I&apos;ve read so far:</h3>
                       <ul className="list-disc w-fit mx-auto">
                         <li><i>The Road</i> by Cormac McCarthy</li>
