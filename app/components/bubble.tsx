@@ -33,10 +33,10 @@ export default function Bubble({type, children}: BubbleProps){
       { /* inner border */}
       <div className="pointer-events-none absolute inset-0.5 rounded-[calc(var(--radius-2xl)-2px)] border border-white/20" />
       {/* shiny corners */}
-      <div className={`pointer-events-none absolute top-0 left-0 bg-radial to-75% h-6 w-6 rounded-2xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
-      <div className={`pointer-events-none absolute top-4 left-0 bg-radial to-75% h-4 w-4 rounded-2xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
-      <div className={`pointer-events-none absolute bottom-0 right-0 bg-radial to-transparent to-80% h-6 w-6 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
-      <div className={`pointer-events-none absolute bottom-4 right-0 bg-radial to-transparent to-80% h-4 w-4 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
+      <div className={`pointer-events-none absolute top-0 left-0 bg-radial to-75% h-6 w-6 rounded-2xl ${ isLight ? 'from-white/80' : 'from-white/30' } transition-colors`} />
+      <div className={`pointer-events-none absolute top-4 left-0 bg-radial to-75% h-4 w-4 rounded-2xl ${ isLight ? 'from-white/80' : 'from-white/30' } transition-colors`} />
+      <div className={`pointer-events-none absolute bottom-0 right-0 bg-radial to-transparent to-80% h-6 w-6 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' } transition-colors`} />
+      <div className={`pointer-events-none absolute bottom-4 right-0 bg-radial to-transparent to-80% h-4 w-4 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' } transition-colors`} />
       {type == 'title' ?
         (
           <div className='flex items-center w-full'>

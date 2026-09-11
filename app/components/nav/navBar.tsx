@@ -1,4 +1,5 @@
 'use client'
+import { useTheme } from "@/app/utils/themeContext"
 
 import NavItem from "./navItem"
 import MusicToggle from "./musicToggle"
@@ -20,6 +21,7 @@ const navItems = [
 ]
 
 export default function NavBar(){
+  const { isLight } = useTheme()
   const currentPath = usePathname()
   const { isVisible, setVisibility } = useNav()
 
@@ -32,10 +34,10 @@ export default function NavBar(){
       { /* inner border */}
       <div className="pointer-events-none absolute inset-0.5 rounded-full border border-white/20" />
       {/* shiny corners */}
-      <div className='pointer-events-none absolute top-1 left-6 bg-radial from-white/80 to-transparent to-75% h-6 w-6 rounded-2xl' />
-      <div className='pointer-events-none absolute top-4 left-4 bg-radial from-white/80 to-transparent to-75% h-4 w-4 rounded-2xl' />
-      <div className='pointer-events-none absolute bottom-1 right-6 bg-radial from-white/80 to-transparent to-80% h-6 w-6 rounded-xl' />
-      <div className='pointer-events-none absolute bottom-4 right-4 bg-radial from-white/80 to-transparent to-80% h-4 w-4 rounded-xl' />
+      <div className={`pointer-events-none absolute top-1 left-6 bg-radial to-75% h-6 w-6 rounded-2xl ${ isLight ? 'from-white/80' : 'from-white/30' } transition-colors`} />
+      <div className={`pointer-events-none absolute top-4 left-4 bg-radial to-75% h-4 w-4 rounded-2xl ${ isLight ? 'from-white/80' : 'from-white/30' } transition-colors`} />
+      <div className={`pointer-events-none absolute bottom-1 right-6 bg-radial to-80% h-6 w-6 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' } transition-colors`} />
+      <div className={`pointer-events-none absolute bottom-4 right-4 bg-radial to-80% h-4 w-4 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' } transition-colors`} />
 
       <nav className="flex flex-row space-x-4 items-center justify-center w-full">
         {navItems.map((item, i) => <NavItem key={i} name={item.name} linkTo={item.linkTo} />)}

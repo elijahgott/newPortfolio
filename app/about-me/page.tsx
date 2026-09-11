@@ -67,7 +67,7 @@ export default function AboutMe(){
               <div className='w-full select-none'>
                 <Bubble type='title'>
                   <div className='relative w-48 aspect-square'>
-                    <Image src="/channelIcons/about-me.jpg" alt="Photo of me (Elijah Gott)" fill className="rounded-xl object-contain" />
+                    <Image src="/channelIcons/about-me.jpg" alt="Photo of me (Elijah Gott)" fill sizes="256px" className="rounded-xl object-contain" />
                   </div>
                   <div className="flex flex-col gap-1 h-fit ml-4">
                     <h1 className={`text-5xl text-center text-white font-bold ${ isLight ? 'drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]' : 'drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]'}`} >Elijah Gott</h1>
@@ -116,7 +116,7 @@ export default function AboutMe(){
                         <div className="float-none md:float-left w-min m-4">
                           <Bubble type="image">
                             <div className='overflow-hidden relative w-64 aspect-square md:mr-4 md:ml-2 mt-4 shadow-lg rounded-xl'>
-                              <Image src="/images/about-me/self-image.jpg" alt="Photo of me at college graduation." fill className="object-cover" />
+                              <Image src="/images/about-me/self-image.jpg" alt="Photo of me at college graduation." fill sizes="256px" className="object-cover" />
                             </div>
                             <p className={`mx-4 mt-2 ${isLight ? 'text-zinc-700' : 'text-zinc-200'}`}>The highest quality photo taken of me at graduation.</p>
                           </Bubble>
@@ -136,32 +136,33 @@ export default function AboutMe(){
                       <div className="flex flex-col justify-center w-full lg:w-1/2">
                       <h2 className='cursor-default font-bold text-[3rem] mb-4 text-transparent'>Gallery</h2>
                         <div className="grid grid-cols-2 justify-center-safe w-fit mx-auto gap-4">
-                          <div className="grid gap-4 w-fit h-fit my-auto mx-auto">
-                            <div className="relative w-64 h-48 rounded-xl shadow-lg">
+                          <div className="grid gap-4 w-64 h-fit my-auto mx-auto">
+                            <div className="relative w-full h-48 rounded-xl shadow-lg">
                               <Image src="/images/about-me/gallery/wyoming2.jpeg" alt="Surprise Lake at Grand Teton National Park" fill sizes="256px" className="rounded-xl object-cover" />
                             </div>
-                            <div className="relative w-64 h-96 rounded-xl shadow-lg">
+                            <div className="relative w-full h-96 rounded-xl shadow-lg">
                               <Image src="/images/about-me/gallery/wyoming3.jpeg" alt="Grand Teton Mountains and Lake" fill sizes="256px" className="rounded-xl object-cover" />
                             </div>
-                            <div className="relative w-64 h-48 rounded-xl shadow-lg">
+                            <div className="relative w-full h-48 rounded-xl shadow-lg">
                               <Image src="/images/about-me/gallery/wyoming1.jpeg" alt="Grand Teton Mountains" fill sizes="256px" className="rounded-xl object-cover" />
                             </div>
                           </div>
 
-                          <div className="grid gap-4 w-fit h-fit my-auto mx-auto">
-                            <div className="relative w-64 h-96 rounded-xl shadow-lg">
-                              <Image src="/images/about-me/gallery/colorado1.jpeg" alt="Creek on a Colorado mountain." fill objectFit="cover" className="rounded-xl" />
+                          <div className="grid gap-4 w-64 h-fit my-auto mx-auto">
+                            <div className="relative w-full h-96 rounded-xl shadow-lg">
+                              <Image src="/images/about-me/gallery/colorado1.jpeg" alt="Creek on a Colorado mountain." fill sizes="256px" objectFit="cover" className="rounded-xl" />
                             </div>
-                            <div className="relative w-64 h-48 rounded-xl shadow-lg">
-                              <Image src="/images/about-me/gallery/lake1.jpeg" alt="View from the lake." fill objectFit="cover" className="rounded-xl" />
+                            <div className="relative w-full h-48 rounded-xl shadow-lg">
+                              <Image src="/images/about-me/gallery/lake1.jpeg" alt="View from the lake." fill objectFit="cover" sizes="256px" className="rounded-xl" />
                             </div>
+                            <p className="text-sm px-1 w-full">Some of my favorite places I&apos;ve traveled to are the Grand Teton National Park in Wyoming (left column), and Colorado (right column, top image).</p>
                           </div>
                         </div>
                       </div>
 
-                      <div className="flex flex-col w-full lg:w-1/2 ml-auto mr-0">
+                      <div className="flex flex-col w-full lg:w-1/2 ml-auto mr-0 pl-2">
                         <h2 className='font-bold text-[3rem] mb-4'>Personal</h2>
-                        <p className="indent-4 mr-4">When I&apos;m not coding, I try to stay away from the screen as much as possible. Some of my favorite ways to do this are by reading, working out, biking, and hiking. When I&apos;m feeling artsy, I also like to draw and play piano, although I am not great at either (yet).</p>
+                        <p className="indent-4 mr-4">When I&apos;m not coding, I try to get outside as much as possible. Some of my favorite ways to do this are by working out, biking, and hiking. When I&apos;m feeling artsy, I also like to draw and play piano, although I am not great at either (yet).</p>
                         <p className="indent-4 mt-4 mr-4">I recently visited the Grand Teton National Park in Wyoming, and was blown away by how beautiful it was. Over the few days I was there, I hiked about 30 miles, and gained approximately 5,000 feet in elevation across the different trails.</p>
                         <p className="mt-4">do i just put a bunch of pictures here? and arrange in cool way?</p>
                       </div>
