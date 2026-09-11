@@ -12,3 +12,16 @@
     transform: translate3d(var(--float-x), var(--float-y), 0);
   }
 }
+
+.background-animation{
+  animation: slideBackground 120s linear infinite;
+}
+
+@keyframes slideBackground{
+  from{
+    transform: 0px 0px;
+  }
+  to{
+    background-position: 1000px -1000px;
+  }
+}

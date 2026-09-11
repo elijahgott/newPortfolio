@@ -91,81 +91,83 @@ export default function ProjectClient({projectName}: {projectName: string}){
   }
 
   return(
-      <div className={`rounded-2xl flex h-full overflow-hidden  bg-linear-70 ${isLight ? 'from-zinc-300 to-white' : 'from-zinc-900 to-zinc-700'}`}>
-  
-          <div className='w-[10%] shrink-0 pl-4 pt-4'>
-            <HomeButton />
-          </div>
-  
-          <main className="min-h-0 w-[80%] flex-1 overflow-y-auto p-8 pr-[10%]">
-  
-            <div className='w-full select-none'>
-              <Bubble type='title'>
-                <div className='relative w-48 aspect-square'>
-                  <Image src={project.iconSource} alt={project.name} style={{'imageRendering': 'pixelated'}} fill className="rounded-xl object-contain" />
-                </div>
-                <h1 className={`h-fit ml-4 text-5xl text-center text-white font-bold ${ isLight ? 'drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]' : 'drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]'} `}>{project.name}</h1>
-              </Bubble>
+      <div className='h-full bg-size-[32px] bg-repeat bg-[url(/images/star-pattern.svg)] background-animation rounded-2xl '>
+        <div className={`rounded-2xl flex h-full overflow-hidden bg-linear-70 ${isLight ? 'from-zinc-300/90 to-white' : 'from-zinc-900/90 to-zinc-700'}`}>
+    
+            <div className='w-[10%] shrink-0 pl-4 pt-4'>
+              <HomeButton />
             </div>
-            
-            <ContentContainer>
-              <div className='w-full flex flex-col lg:flex-row'>
-                <div className='ml-0 mr-auto w-full lg:w-1/2 float-left'>
-                  <div className='relative w-full aspect-video'>
-                    <Image src={project.imageSource} alt={project.name} fill className="rounded-2xl object-fill shadow-2xl border-2 border-white/30" />
+    
+            <main className="min-h-0 w-[80%] flex-1 overflow-y-auto p-8 pr-[10%]">
+    
+              <div className='w-full select-none'>
+                <Bubble type='title'>
+                  <div className='relative w-48 aspect-square'>
+                    <Image src={project.iconSource} alt={project.name} style={{'imageRendering': 'pixelated'}} fill className="rounded-xl object-contain" />
                   </div>
+                  <h1 className={`h-fit ml-4 text-5xl text-center text-white font-bold ${ isLight ? 'drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]' : 'drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]'} `}>{project.name}</h1>
+                </Bubble>
+              </div>
+              
+              <ContentContainer>
+                <div className='w-full flex flex-col lg:flex-row'>
+                  <div className='ml-0 mr-auto w-full lg:w-1/2 float-left'>
+                    <div className='relative w-full aspect-video'>
+                      <Image src={project.imageSource} alt={project.name} fill className="rounded-2xl object-fill shadow-2xl border-2 border-white/30" />
+                    </div>
 
-                  <div className='flex justify-center gap-2 mt-2'>
-                    <div className="flex w-32 aspect-square">
-                      <ProjectButton type='play' link={project.playLink} />
+                    <div className='flex justify-center gap-2 mt-2'>
+                      <div className="flex w-32 aspect-square">
+                        <ProjectButton type='play' link={project.playLink} />
+                      </div>
+                      
+                      <div className="flex w-32 aspect-square">
+                        <ProjectButton type='github' link={project.gitHubLink} />
+                      </div>
                     </div>
                     
-                    <div className="flex w-32 aspect-square">
-                      <ProjectButton type='github' link={project.gitHubLink} />
+                  </div>
+                  
+    
+                  <div className='w-full lg:w-1/2 ml-auto mr-0 z-40'>
+                    <p className='m-6 indent-2 text-xl'>{project.description}</p>
+
+                    <div className='w-fit max-w-full mx-auto flex select-none'>
+                      <Bubble type='text'>
+                        <div className='flex my-auto w-full'>
+                          <div className='pr-8 [writing-mode:vertical-lr] [text-orientation:upright]'>
+                            <h2 className='text-2xl text-center text-white font-bold drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]'>SKILLS</h2>
+                          </div>
+    
+                          <div className='w-full font-semibold text-nowrap flex flex-col'>
+                            <ul className='my-auto'>
+                              {project.skills.map(skill => <li key={skill} className='text-center'>{skill}</li>)}
+                            </ul>
+                            {project.notes.length != 0 ?
+                              (
+                                project.notes.map((note, i) => <p key={i} className={`mt-4 text-xs text-wrap text-center ${isLight ? 'text-zinc-600' : 'text-zinc-300'} `}>{note}</p>)
+                              )
+                              :
+                              (
+                                null
+                              )
+                            }
+                          </div>
+                        </div>
+                      </Bubble>
                     </div>
                   </div>
-                  
                 </div>
                 
-  
-                <div className='w-full lg:w-1/2 ml-auto mr-0 z-40'>
-                  <p className='m-6 indent-2 text-xl'>{project.description}</p>
-
-                  <div className='w-fit max-w-full mx-auto flex select-none'>
-                    <Bubble type='text'>
-                      <div className='flex my-auto w-full'>
-                        <div className='pr-8 [writing-mode:vertical-lr] [text-orientation:upright]'>
-                          <h2 className='text-2xl text-center text-white font-bold drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]'>SKILLS</h2>
-                        </div>
-  
-                        <div className='w-full font-semibold text-nowrap flex flex-col'>
-                          <ul className='my-auto'>
-                            {project.skills.map(skill => <li key={skill} className='text-center'>{skill}</li>)}
-                          </ul>
-                          {project.notes.length != 0 ?
-                            (
-                              project.notes.map((note, i) => <p key={i} className={`mt-4 text-xs text-wrap text-center ${isLight ? 'text-zinc-600' : 'text-zinc-300'} `}>{note}</p>)
-                            )
-                            :
-                            (
-                              null
-                            )
-                          }
-                        </div>
-                      </div>
-                    </Bubble>
-                  </div>
+    
+                <div className="w-fit mx-auto mt-4 flex justify-center space-x-4">
+                    
+    
                 </div>
-              </div>
-              
-  
-              <div className="w-fit mx-auto mt-4 flex justify-center space-x-4">
-                  
-  
-              </div>
-              
-            </ContentContainer>
-          </main>
+                
+              </ContentContainer>
+            </main>
+        </div>
       </div>
     )
 }
