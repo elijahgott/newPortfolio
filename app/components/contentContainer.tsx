@@ -18,7 +18,7 @@ export default function ContentContainer({children}: ContentContainerProps){
           playSound('hover')
         }
       }}
-    className={`relative w-full mt-4 p-6 rounded-2xl border-2 border-transparent box-border ${isLight ? 'text-black' : 'text-white'}
+    className={`relative w-full mt-4 p-6 rounded-2xl border-2 border-transparent box-border backdrop-blur-xs ${isLight ? 'text-black' : 'text-white'}
     bg-zinc-500/20 shadow-[0px_24px_2px_-1px_rgba(0,0,0,0.3)]
      hover:border-cyan-400/80
       transition-all duration-75`}>
