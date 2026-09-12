@@ -119,7 +119,7 @@ export default function AboutMe(){
                               <div className='overflow-hidden relative w-64 aspect-square md:mr-4 md:ml-2 mt-4 shadow-lg rounded-xl'>
                                 <Image src="/images/about-me/self-image.jpg" alt="Photo of me at college graduation." fill sizes="256px" className="object-cover" />
                               </div>
-                              <p className={`mx-4 mt-2 ${isLight ? 'text-zinc-700' : 'text-zinc-200'}`}>The highest quality photo taken of me at graduation.</p>
+                              <p className={`mx-4 mt-2`}>Photo taken of me at college graduation (highest quality photo I have).</p>
                             </Bubble>
                           </div>
 

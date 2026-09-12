@@ -19,7 +19,7 @@ export default function ContentContainer({children}: ContentContainerProps){
         }
       }}
     className={`relative w-full mt-4 p-6 rounded-2xl border-2 border-transparent box-border backdrop-blur-xs ${isLight ? 'text-black' : 'text-white'}
-    bg-zinc-500/20 shadow-[0px_24px_2px_-1px_rgba(0,0,0,0.3)]
+    bg-zinc-500/20 shadow-2xl
      hover:border-cyan-400/80
       transition-all duration-75`}>
       { /* gradients along borders */ }
