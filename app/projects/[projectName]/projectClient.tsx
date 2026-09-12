@@ -15,7 +15,7 @@ const projects = {
     'gitHubLink': 'https://github.com/elijahgott/workoutTrackerApp',
     'iconSource': '/channelIcons/workout-tracker-2.png',
     'imageSource': '/projectImages/workout-tracker.jpg',
-    'description': 'My Workout Tracker app is a React app used to aid users in tracking their progress in the gym, which will lead to better, more efficient workouts. This is done by tracking each exercise in a workout. The user first creates a workout, like Leg Day, and then adds exercises to that workout, like Squats, and they can update the sets, reps, and weight they do each time they workout, which will help them to push themselves harder each time.',
+    'description': 'My Workout Tracker app is a React app used to aid users in tracking their progress in the gym, which will lead to better, more efficient workouts. This is done by tracking each exercise in a workout. After account creation, the user first creates a workout, like "Leg Day", and then adds exercises to that workout, like "Squats". For each exercise in a workout, the user can update the number of sets, reps, and amount of weight they do each time they workout, which will help them to track their progress, and push themselves harder each time they go to the gym.\nShortly after I completed Full Stack Open\'s web development course, I wanted to use what I learned to create a tool that could help me in my (nearly) everyday life. This project was completed over the course of about a month, while mainly working on weekends.\nI have personally used this app to aid with consistently pushing myself in the gym, and I feel that it has helped me to increase my overall strength while also reducing the frequency in which I slack during a workout due to "not feeling it".',
     'skills': ['React', 'JavaScript', 'Styled-Components', 'Node.js', 'Express', 'MongoDB', 'REST API'],
     'notes': []
   },
@@ -25,9 +25,9 @@ const projects = {
     'gitHubLink': 'https://github.com/elijahgott/seniordesignproject',
     'iconSource': '/channelIcons/music-tracker.png',
     'imageSource': '/projectImages/music-tracker.jpg',
-    'description': 'The main purpose of this project is to aid in tracking and rating albums you have listened to. However, there are plenty of other functions that naturally coincide with this purpose, such as an account system, creating lists (Top 5 Artists, Albums, etc) for each account, adding new albums and artists into the database, and more were needed for the basic functionality of the project.',
-    'skills': ['React', 'JavaScript', 'MySQL*', 'Node.js', 'Express', 'MongoDB*'],
-    'notes': ['*Original project used MySQL for the database, however I switched to MongoDB in 2026.']
+    'description': 'I created Music Tracker for my Senior Design Project, and it is essentially Letterboxd, but for albums instead of movies. The main objective of this app is to aid in tracking and rating albums you have listened to, as well as tracking albums that you want to listen to. Social interactivity naturally coincides with this objective, which led me to creating an account system, list creation ("Personal Top 10 Albums" list, for example), posts, and more social features.\nIf I was to redo this project now, the main change I\'d make is removing the manual insertion of artists and albums, and replacing it with a web-scraping based approach. With that being said, I feel that the app ended up being good considering my skill level when I started on it (I had no previous experience with React or JavaScript when I began work on the project).\nEarly in 2026, I re-did nearly all of the project, updating the frontend, backend, and completely migrating the database from MySQL to MongoDB. As a result of this, the majority of the app is optimized much better and more performant, however some features that were present in the original version of the app are disabled or not working. In the future, I would love to return to this project and finish my original vision for it, however learning new technologies has taken precedence over updating older projects.',
+    'skills': ['React', 'Bootstrap', 'JavaScript', 'Node.js', 'Express', 'MySQL*', 'MongoDB*'],
+    'notes': ['*Original project used MySQL for the database,', 'however I switched to MongoDB in 2026.']
   },
   'script-launcher': {
     'name': 'Script Launcher',
@@ -35,8 +35,8 @@ const projects = {
     'gitHubLink': 'https://github.com/elijahgott/scriptLauncher',
     'iconSource': '/channelIcons/script-launcher.png',
     'imageSource': '/projectImages/script-launcher.jpg',
-    'description': 'Simple script launcher built using Python and Tkinter. The user selects a script from a pre-defined list of scripts, and can either "Run" or "Loop" the selected script. This is the first Python project I\'ve worked on, and is quite small, but I believe it is a great introduction into what is possible with Python.',
-    'skills': ['Python'],
+    'description': 'Simple script launcher built using Python and Tkinter. The user selects a script from a pre-defined list of scripts, and can either "Run" the script once, or "Loop" until the user hits "Stop". This app is intended for use in video games, like for AFK farming in Minecraft. In the future, I would like to add the ability to record inputs and save these inputs as a new selectable script.\nThis is the first Python project I\'ve created, and is quite small, but I believe it serves as a great introduction into what is possible with Python.',
+    'skills': ['Python', 'TKinter'],
     'notes': []
   },
   'rss-feed': {
@@ -45,8 +45,8 @@ const projects = {
     'gitHubLink': 'https://github.com/elijahgott/rssWebsite',
     'iconSource': '/channelIcons/rss-feed.png',
     'imageSource': '/projectImages/rss-feed.jpg',
-    'description': 'My RSS feed is the smallest web app I\'ve created so far, because it is intended solely for my use. I decided not to include a database or user authentication, because I wanted this to be simple, and only used for checking news that I am interested in. I focused more on theming than I have in the past, limiting myself to only a few shades of green and creating all the art used throughout the website myself.',
-    'skills': ['React', 'JavaScript', 'Node.js', 'Express', 'REST API'],
+    'description': 'My RSS Feed is a web app I created to compile news, articles, and videos that I am interested in, rather than me having to search through each individual site. This is the smallest web app I\'ve created so far, because was created solely with myself in mind. I made the choice not to include a database or user authentication, because this app was created for my own use, and not as a platform where anyone can create their own RSS feed. The decision to make this project for myself gave me the freedom to do whatever I wanted for theming, which is why I opted for a slightly retro theme, rather than using a more generic, modern theme.\nI created all of the pixel art myself, which is something that I have really grown to enjoy since first working on my 2D Platformer Demo in Godot.',
+    'skills': ['React', 'JavaScript', 'Node.js', 'Express', 'REST API', 'Pixel Art'],
     'notes': []
   },
   'text-rpg': {
@@ -55,8 +55,8 @@ const projects = {
     'gitHubLink': 'https://github.com/elijahgott/Simple-C-RPG',
     'iconSource': '/channelIcons/c-sharp-rpg.png',
     'imageSource': '/projectImages/c-sharp-rpg.jpg',
-    'description': 'This is a simple text-based RPG using C# and Visual Studio\'s UI elements. I followed a tutorial by Scott Lilly for this project, as I had never used C# and had barely worked on games prior to this project. This served as a step further into the world of game development and a refresher on Object Oriented programming, both of which I have come to really appreciate lately.',
-    'skills': ['C#'],
+    'description': 'This is a simple text-based RPG using C# and Visual Studio\'s UI elements. I followed a tutorial by Scott Lilly for this project, as I had never used C# before and had barely worked on game development prior to this project. This served as a step further into the world of game development and a refresher on Object Oriented programming.\nAs someone who has never played text-based games before, it was interesting to experience how video games were originally played. While text-based games may not be my personal favorite, this tutorial was a great introduction into game programming, and helped me learn and re-learn many OOP and Game Development concepts.',
+    'skills': ['C#', 'Visual Studio'],
     'notes': ['Tutorial at https://scottlilly.com/learn-c-by-building-a-simple-rpg-index/']
   },
   '2d-platformer': {
@@ -65,7 +65,7 @@ const projects = {
     'gitHubLink': 'https://github.com/elijahgott/2DPlatformerDemo',
     'iconSource': '/channelIcons/godot-2d-platformer.png',
     'imageSource': '/projectImages/2d-platformer.jpg',
-    'description': 'This is my first time really jumping into game development. This is still a work in progress, but I am using the Godot game engine with C# to make this simple game. I intend on it essentially being a Mario clone, but I have been enjoying adding other features that aren\'t present in the 2D Mario games as a way to experiment and learn. I have also been learning how to do pixel art for this game, and have made all of the assets myself.',
+    'description': 'For my first attempt at game development, I began to learn how to use the Godot game engine to create a Mario-style 2D platformer. Rather than using Godot\'s preferred programming langauge, GDScript, I used this opportunity to improve my C# skills. While this demo began as a "Mario clone," I added other features and abilities that are not present in the 2D Mario games, like a double jump, for example, just for the sake of learning.\nI first began learning pixel art for this game, which I have come to love over time, and have used the skills I learned from this game to create assets for many other projects, including this website\'s original icons.\nDespite enjoying working on this demo, after some time I realized that I was more interested in creating a game engine myself, rather than learning how to use someone else\'s engine, so I began learning how to create a game engine in Java from RyiSnow\'s YouTube series.',
     'skills': ['Godot', 'C#', 'Pixel Art'],
     'notes': []
   },
@@ -85,6 +85,7 @@ export default function ProjectClient({projectName}: {projectName: string}){
   const {isLight} = useTheme()
 
   let project = projects[projectName as keyof typeof projects]
+  console.log(projects)
 
   if(!project){
     project = projects['default']
@@ -130,7 +131,12 @@ export default function ProjectClient({projectName}: {projectName: string}){
                   
     
                   <div className='w-full lg:w-1/2 ml-auto mr-0 z-40'>
-                    <p className='m-6 indent-2 text-xl'>{project.description}</p>
+
+                    {project.description.split('\n').map((paragraph, i) => {
+                      return(
+                        <p className='m-6 indent-2 text-xl' key={i}>{paragraph}</p>
+                      )
+                    })}
 
                     <div className='w-fit max-w-full mx-auto flex select-none'>
                       <Bubble type='text'>
@@ -145,7 +151,7 @@ export default function ProjectClient({projectName}: {projectName: string}){
                             </ul>
                             {project.notes.length != 0 ?
                               (
-                                project.notes.map((note, i) => <p key={i} className={`mt-4 text-xs text-wrap text-center ${isLight ? 'text-zinc-600' : 'text-zinc-300'} `}>{note}</p>)
+                                project.notes.map((note, i) => <p key={i} className={`mt-1 text-xs text-wrap text-center ${isLight ? 'text-zinc-600' : 'text-zinc-300'} `}>{note}</p>)
                               )
                               :
                               (

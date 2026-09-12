@@ -71,6 +71,7 @@ export default function Home() {
             <ul className="list-disc text-black">
               <li>add more to project pages, esp description</li>
               <li>make channels more responsive, they break when too small</li>
+              <li>make next and previous buttons on project pages</li>
             </ul>
           </div>
         </div>
