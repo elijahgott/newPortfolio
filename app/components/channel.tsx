@@ -37,7 +37,7 @@ export default function Channel({name, imageSource, linkTo}: ChannelProps){
         </div>
 
         { /* top shiny */}
-        <div className={`pointer-events-none absolute inset-x-0 top-0 h-1/2 rounded-t-2xl bg-linear-to-b ${ isLight ? 'from-white/60' : 'from-white/30' }`} />
+        <div className={`pointer-events-none absolute inset-x-0 top-0 h-1/2 rounded-t-2x bg-cover bg-linear-to-b ${ isLight ? 'from-white/60' : 'from-white/30' }`} />
         { /* inner border */}
         <div className="pointer-events-none absolute inset-0.5 rounded-[calc(var(--radius-2xl)-2px)] border border-white/20" />
         {/* shiny corners */}

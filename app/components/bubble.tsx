@@ -29,7 +29,7 @@ export default function Bubble({type, children}: BubbleProps){
         }
       }}>
       {/* top shiny */}
-      {/* <div className='w-full h-[50%] pointer-events-none absolute left-0 top-0 rounded-t-lg bg-linear-to-b from-white/50' /> */}
+      {/* <div className='w-full h-1/2 pointer-events-none absolute left-0 top-0 rounded-t-lg bg-contain bg-linear-to-b from-white/50' /> */}
       { /* inner border */}
       <div className="pointer-events-none absolute inset-0.5 rounded-[calc(var(--radius-2xl)-2px)] border border-white/20" />
       {/* shiny corners */}
