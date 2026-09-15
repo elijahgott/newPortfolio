@@ -9,14 +9,15 @@ interface ChannelProps{
   name: string;
   imageSource: string;
   linkTo: string;
+  pixelated: boolean;
 }
 
-export default function Channel({name, imageSource, linkTo}: ChannelProps){
+export default function Channel({name, imageSource, linkTo, pixelated}: ChannelProps){
   const {audioUnlocked} = useAudio()
   const {isLight} = useTheme()
 
   return(
-    <Link className='block w-full aspect-square border border-blue-' href={linkTo}
+    <Link className='block w-full aspect-square' href={linkTo}
       onMouseEnter={() => {
         if(audioUnlocked){
           playSound('hover')
@@ -33,7 +34,7 @@ export default function Channel({name, imageSource, linkTo}: ChannelProps){
                       active:scale-95
                       transition-all duration-75">
         <div className='m-auto relative w-[95%] h-[95%]'>
-          <Image src={imageSource} alt={name} fill sizes='(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 20vw' className="rounded-xl object-contain" style={{'imageRendering': 'pixelated'}} />
+          <Image src={imageSource} alt={name} fill sizes='(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 20vw' className="rounded-xl object-contain" style={pixelated ? {imageRendering: 'pixelated'} : {}} />
         </div>
 
         { /* top shiny */}

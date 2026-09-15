@@ -11,31 +11,37 @@ const projects = [
     'name': 'Workout Tracker',
     'linkTo': '/projects/workout-tracker',
     'imageSource': '/channelIcons/workout-tracker-2.png',
+    'imagePixelated': false,
   },
   {
     'name': 'Music Tracker',
     'linkTo': '/projects/music-tracker',
     'imageSource': '/channelIcons/music-tracker.png',
+    'imagePixelated': false,
   },
   {
     'name': 'Script Launcher',
     'linkTo': '/projects/script-launcher',
     'imageSource': '/channelIcons/script-launcher.png',
+    'imagePixelated': true,
   },
   {
     'name': 'RSS Feed',
     'linkTo': '/projects/rss-feed',
     'imageSource': '/channelIcons/rss-feed.png',
+    'imagePixelated': true,
   },
   {
     'name': 'Text-Based RPG',
     'linkTo': '/projects/text-rpg',
     'imageSource': '/channelIcons/c-sharp-rpg.png',
+    'imagePixelated': false,
   },
   {
     'name': '2D Platformer Demo',
     'linkTo': '/projects/2d-platformer',
     'imageSource': '/channelIcons/godot-2d-platformer.png',
+    'imagePixelated': true,
   },
 ]
 
@@ -54,13 +60,13 @@ export default function Home() {
         <div className="flex w-full h-fit my-auto">
           <div className="absolute top-4 left-4 w-32 aspect-square
           xl:w-40">
-            <Channel name="Elijah" imageSource='/channelIcons/about-me.jpg' linkTo="about-me" />
+            <Channel name="Elijah" imageSource='/channelIcons/about-me.jpg' linkTo="about-me" pixelated={false} />
           </div>
           <main className="mx-auto my-auto grid grid-cols-3 grid-rows-5 gap-6 w-[80%] h-fit pr-[10%] p-4
           lg:grid-cols-5 lg:grid-rows-3 md:gap-4 md:p-8
           lg:gap-8">
             {projects.map(c => {
-              return (<Channel key={c.name} name={c.name} imageSource={c.imageSource} linkTo={c.linkTo} />)
+              return (<Channel key={c.name} name={c.name} imageSource={c.imageSource} linkTo={c.linkTo} pixelated={c.imagePixelated} />)
             })}
           </main>
           <div className="absolute top-4 right-4 w-32 aspect-square
