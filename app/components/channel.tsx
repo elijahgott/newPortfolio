@@ -16,7 +16,7 @@ export default function Channel({name, imageSource, linkTo}: ChannelProps){
   const {isLight} = useTheme()
 
   return(
-    <Link className='block w-full' href={linkTo}
+    <Link className='block w-full aspect-square border border-blue-' href={linkTo}
       onMouseEnter={() => {
         if(audioUnlocked){
           playSound('hover')
@@ -28,7 +28,7 @@ export default function Channel({name, imageSource, linkTo}: ChannelProps){
         }
       }}>
       
-      <div className="p-4 relative rounded-2xl bg-zinc-300/15 backdrop-blur-xs shadow-lg overflow-hidden aspect-square border-2 border-white/40
+      <div className="p-4 w-full h-full relative rounded-2xl bg-zinc-300/15 backdrop-blur-xs shadow-lg overflow-hidden border-2 border-white/40
                       hover:scale-110 hover:bg-cyan-400/80 hover:cursor-pointer
                       active:scale-95
                       transition-all duration-75">
