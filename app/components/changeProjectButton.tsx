@@ -5,6 +5,8 @@ import { playSound } from "../utils/soundManager";
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
+import Link from "next/link";
+
 interface buttonProps{
   direction: string;
   link: string;
@@ -39,19 +41,19 @@ export default function ChangeProjectButton({direction, link} : buttonProps){
           <div className={`z-10 pointer-events-none absolute bottom-6 right-2 bg-radial to-80% h-4 w-4 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
           {direction == 'left' ?
             (
-                <a href={link} className={`${link == 'N/A' ? 'pointer-events-none' : ''} w-full aspect-square my-auto`}>
+                <Link href={link} className={`${link == 'N/A' ? 'pointer-events-none' : ''} w-full aspect-square my-auto`}>
                   <div className='relative flex items-center justify-center w-full h-full rounded-full' >
                     <NavigateBeforeIcon sx={{ fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))' }} className="text-white" />
                   </div>
-                </a>
+                </Link>
             )
           :
             (
-              <a href={link} className="w-full aspect-square rounded-full my-auto">
+              <Link href={link} className="w-full aspect-square rounded-full my-auto">
                 <div className="relative flex items-center justify-center w-full h-full rounded-full">
                   <NavigateNextIcon sx={{ fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))' }} className="text-white" />
                 </div>
-              </a>
+              </Link>
             )
           }
         </div>

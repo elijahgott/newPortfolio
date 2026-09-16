@@ -62,7 +62,7 @@ export default function Home() {
           xl:w-40">
             <Channel name="Elijah" imageSource='/channelIcons/about-me.jpg' linkTo="about-me" pixelated={false} />
           </div>
-          <main className="w-[80%] aspect-video mx-auto grid grid-cols-3 grid-rows-5
+          <main className="w-[80%] lg:aspect-video mx-auto grid grid-cols-3 grid-rows-5 gap-4 border
           lg:grid-cols-5 lg:grid-rows-3 md:gap-4 md:p-8
           lg:gap-8">
             {projects.map(c => {
@@ -75,9 +75,8 @@ export default function Home() {
             <h1 className="mt-8 font-bold">What i want</h1>
 
             <ul className="list-disc">
-              <li>add more to project pages, esp description</li>
               <li>make channels more responsive, they break when too small</li>
-              <li>make next and previous buttons on project pages</li>
+              <li>transition between project pages? like slide to left/right</li>
             </ul>
           </div>
         </div>
