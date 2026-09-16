@@ -58,7 +58,7 @@ export default function AboutMe(){
 
   return(
     <div className='h-full bg-size-[32px] bg-repeat bg-[url(/images/star-pattern.svg)] background-animation rounded-2xl '>
-      <div className={`rounded-2xl flex h-full overflow-hidden  bg-linear-70 ${isLight ? 'from-zinc-300/90 to-white' : 'from-zinc-900/90 to-zinc-700'}`}>
+      <div className={`rounded-2xl flex h-full overflow-hidden  bg-linear-70 ${isLight ? 'from-zinc-300/90 to-zinc-100' : 'from-zinc-900/90 to-zinc-700'}`}>
               <div className='w-[10%] shrink-0 pl-4 pt-4'>
                 <HomeButton />
               </div>
