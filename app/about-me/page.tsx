@@ -58,12 +58,12 @@ export default function AboutMe(){
 
   return(
     <div className='h-full bg-size-[32px] bg-repeat bg-[url(/images/star-pattern.svg)] background-animation rounded-2xl '>
-      <div className={`rounded-2xl flex h-full overflow-hidden  bg-linear-70 ${isLight ? 'from-zinc-300/90 to-zinc-100' : 'from-zinc-900/90 to-zinc-700'}`}>
-              <div className='w-[10%] shrink-0 pl-4 pt-4'>
-                <HomeButton />
-              </div>
-      
-              <main className="min-h-0 w-[80%] flex-1 overflow-y-auto p-8 pr-[10%]">
+      <div className={`rounded-2xl flex h-full overflow-hidden bg-linear-70 ${isLight ? 'from-zinc-300/90 to-zinc-100' : 'from-zinc-900/90 to-zinc-700'}`}>
+              <main className="min-h-0 w-[80%] flex-1 overflow-y-auto p-[min(100px,5%)]">
+                <div className='absolute z-10 top-1 left-1 w-28
+                lg:top-4 lg:left-4 lg:w-32'>
+                  <HomeButton />
+                </div>
       
                 <div className='w-full select-none'>
                   <Bubble type='title'>
@@ -72,7 +72,7 @@ export default function AboutMe(){
                     </div>
                     <div className="flex flex-col gap-1 h-fit ml-4">
                       <h1 className={`text-5xl text-center text-white font-bold ${ isLight ? 'drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]' : 'drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]'}`} >Elijah Gott</h1>
-                      <h2 className={`text-xl font-semibold ${ isLight ? 'text-zinc-600' : 'text-zinc-400 drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]'}`} >Junior Software Developer</h2>
+                      <h2 className={`text-xl text-center indent-2 font-semibold ${ isLight ? 'text-zinc-600' : 'text-zinc-400 drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]'}`} >Junior Software Developer</h2>
                     </div>
                     <div className={`absolute top-0 right-0 flex m-5 text-md font-semibold ${ isLight ? 'text-zinc-600' : 'text-zinc-400 drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]'}`}>
                       <LocationPinIcon />
@@ -132,16 +132,16 @@ export default function AboutMe(){
                     { /* personal section (party) */ }
                     <section className="flex flex-col mt-16 mb-8 text-xl">
                       <div className="flex flex-col xl:flex-row">
-                        <div className='flex flex-col w-full h-fit my-auto lg:w-1/2 ml-auto mr-0'>
+                        <div className='flex flex-col w-full h-fit my-auto xl:w-1/2 ml-auto mr-0'>
                           <h2 className='font-bold text-[3rem] ml-2 mb-4'>Personal</h2>
                           <p className="indent-4 mx-2">When I&apos;m not coding, I try to get outside as much as possible. Some of my favorite ways to do this are by working out, biking, and hiking. When I&apos;m feeling artsy, I also like to draw and play piano, although I am not great at either (yet).</p>
                           <p className="indent-4 mt-4 mx-2">I recently visited the Grand Teton National Park in Wyoming, and was blown away by how beautiful it was. Over the few days I was there, I hiked about 30 miles, and gained approximately 5,000 feet in elevation across the different trails.</p>
                         </div>
 
                         { /* image gallery */ }
-                        <div className="flex flex-col justify-center w-full lg:w-1/2">
+                        <div className="flex flex-col justify-center w-full xl:w-1/2 xl:min-w-fit">
                         <h2 className='cursor-default font-bold text-[3rem] mb-4 text-transparent'>Gallery</h2>
-                          <div className="grid grid-cols-2 justify-center-safe w-fit mx-auto gap-4">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 justify-center-safe w-fit mx-auto gap-4">
                             <div className="grid gap-4 w-64 h-fit my-auto mx-auto">
                               <div className="relative w-full h-48 rounded-xl shadow-lg">
                                 <Image src="/images/about-me/gallery/wyoming2.jpeg" alt="Surprise Lake at Grand Teton National Park" fill sizes="256px" className="rounded-xl object-cover" />

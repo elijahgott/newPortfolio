@@ -110,15 +110,16 @@ export default function ProjectClient({projectName}: {projectName: string}){
       <div className='h-full bg-size-[32px] bg-repeat bg-[url(/images/star-pattern.svg)] background-animation rounded-2xl '>
         <div className={`rounded-2xl flex h-full overflow-hidden bg-linear-70 ${isLight ? 'from-zinc-300/90 to-zinc-100' : 'from-zinc-900/90 to-zinc-700'}`}>
     
-            <div className='absolute w-32 top-4 left-4'>
+            <div className='absolute w-28 z-10 top-1 left-1
+            lg:top-4 lg:left-4 lg:w-32'>
               <HomeButton />
             </div>
     
-            <main className="min-h-0 w-[80%] flex-1 overflow-y-auto py-8 px-[10%]">
-              <div className='absolute left-8 top-1/2'>
+            <main className="min-h-0 w-[80%] flex-1 overflow-y-auto py-8 p-[min(100px,5%)]">
+              <div className='absolute top-1/2 z-10 left-2 lg:left-6'>
                 <ChangeProjectButton direction='left' link={project.previousProject} /> {/* previous project button */}
               </div>
-              <div className='absolute right-8 top-1/2'>
+              <div className='absolute top-1/2 z-10 right-2 lg:right-6'>
                 <ChangeProjectButton direction='right' link={project.nextProject} /> {/* next project button */}
               </div>
     
@@ -132,7 +133,7 @@ export default function ProjectClient({projectName}: {projectName: string}){
               </div>
               
               <ContentContainer>
-                <div className='w-full flex flex-col lg:flex-row'>
+                <div className='w-full flex flex-col lg:flex-row xl:px-4'>
                   <div className='ml-0 mr-auto w-full lg:w-1/2 float-left'>
                     <div className='relative w-full aspect-video'>
                       <Image src={project.imageSource} alt={project.name} fill className="rounded-2xl object-fill shadow-2xl border-2 border-white/30" />

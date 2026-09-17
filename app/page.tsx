@@ -62,7 +62,7 @@ export default function Home() {
           xl:w-40">
             <Channel name="Elijah" imageSource='/channelIcons/about-me.jpg' linkTo="about-me" pixelated={false} />
           </div>
-          <main className="w-[80%] lg:aspect-video mx-auto grid grid-cols-3 grid-rows-5 gap-4 border
+          <main className="w-[80%] lg:aspect-video mx-auto grid grid-cols-3 grid-rows-5 gap-4
           lg:grid-cols-5 lg:grid-rows-3 md:gap-4 md:p-8
           lg:gap-8">
             {projects.map(c => {

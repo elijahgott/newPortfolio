@@ -43,7 +43,7 @@ export default function ChangeProjectButton({direction, link} : buttonProps){
             (
                 <Link href={link} className={`${link == 'N/A' ? 'pointer-events-none' : ''} w-full aspect-square my-auto`}>
                   <div className='relative flex items-center justify-center w-full h-full rounded-full' >
-                    <NavigateBeforeIcon sx={{ fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))' }} className="text-white" />
+                    <NavigateBeforeIcon sx={{ fontSize: {xs: 56,sm: 64, md: 72, lg: 80}, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))' }} className="text-white" />
                   </div>
                 </Link>
             )
@@ -51,7 +51,7 @@ export default function ChangeProjectButton({direction, link} : buttonProps){
             (
               <Link href={link} className="w-full aspect-square rounded-full my-auto">
                 <div className="relative flex items-center justify-center w-full h-full rounded-full">
-                  <NavigateNextIcon sx={{ fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))' }} className="text-white" />
+                  <NavigateNextIcon sx={{ fontSize: {xs: 56,sm: 64, md: 72, lg: 80}, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))' }} className="text-white" />
                 </div>
               </Link>
             )
