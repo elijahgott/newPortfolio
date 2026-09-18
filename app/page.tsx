@@ -1,4 +1,5 @@
 'use client'
+import { motion } from "motion/react";
 import { useEffect } from "react";
 import Channel from "./components/channel";
 import DarkModeToggle from "./components/darkModeToggle";
@@ -62,13 +63,16 @@ export default function Home() {
           xl:w-40">
             <Channel name="Elijah" imageSource='/channelIcons/about-me.jpg' linkTo="about-me" pixelated={false} />
           </div>
-          <main className="w-[80%] lg:aspect-video mx-auto grid grid-cols-3 grid-rows-5 gap-4
+          <motion.main className="w-[80%] lg:aspect-video mx-auto grid grid-cols-3 grid-rows-5 gap-4
           lg:grid-cols-5 lg:grid-rows-3 md:gap-4 md:p-8
-          lg:gap-8">
+          lg:gap-8"
+          initial={{opacity: 0, y: '-100%'}}
+          animate={{opacity: 1, y: 0}}
+          transition={{ type: 'spring', bounce: 0.1, damping: 9, mass: 0.5}}>
             {projects.map(c => {
               return (<Channel key={c.name} name={c.name} imageSource={c.imageSource} linkTo={c.linkTo} pixelated={c.imagePixelated} />)
             })}
-          </main>
+          </motion.main>
           <div className="absolute top-4 right-4 w-32 aspect-square
           xl:w-40">
             <DarkModeToggle />

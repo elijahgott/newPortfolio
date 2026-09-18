@@ -67,7 +67,8 @@ export default function AboutMe(){
       <div className={`rounded-2xl flex h-full overflow-hidden bg-linear-70 ${isLight ? 'from-zinc-300/90 to-zinc-100' : 'from-zinc-900/90 to-zinc-700'}`}>
         <motion.main className="min-h-0 w-[80%] flex-1 overflow-y-auto p-[min(100px,5%)]"
         initial={{opacity: 0, y: '100%'}}
-        animate={{opacity: 1, y: 0}}>
+        animate={{opacity: 1, y: 0}}
+        transition={{ type: 'spring', bounce: 0.1, damping: 9, mass: 0.5}}>
           <div className='w-full select-none'>
             <Bubble type='title'>
               <div className='relative w-48 aspect-square'>
