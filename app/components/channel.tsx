@@ -17,7 +17,10 @@ export default function Channel({name, imageSource, linkTo, pixelated}: ChannelP
   const {isLight} = useTheme()
 
   return(
-    <Link className='block w-full aspect-square' href={linkTo}
+    <Link className='block w-full aspect-square rounded-2xl bg-zinc-300/15 backdrop-blur-xs shadow-lg overflow-hidden border-2 border-white/40
+    hover:scale-110 hover:bg-cyan-400/80 hover:cursor-pointer
+    active:scale-95
+    transition-all duration-75' href={linkTo}
       onMouseEnter={() => {
         if(audioUnlocked){
           playSound('hover')
@@ -29,10 +32,7 @@ export default function Channel({name, imageSource, linkTo, pixelated}: ChannelP
         }
       }}>
       
-      <div className="p-4 w-full h-full relative rounded-2xl bg-zinc-300/15 backdrop-blur-xs shadow-lg overflow-hidden border-2 border-white/40
-                      hover:scale-110 hover:bg-cyan-400/80 hover:cursor-pointer
-                      active:scale-95
-                      transition-all duration-75">
+      <div className="p-4 w-full h-full relative">
         <div className='m-auto relative w-[95%] h-[95%]'>
           <Image src={imageSource} alt={name} fill sizes='(max-width: 640px) 40vw, (max-width: 1024px) 30vw, 20vw' className="rounded-xl object-contain" style={pixelated ? {imageRendering: 'pixelated'} : {}} />
         </div>
