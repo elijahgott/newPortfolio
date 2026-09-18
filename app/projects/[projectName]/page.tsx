@@ -9,5 +9,5 @@ interface ProjectProps{
 export default async function ProjectPage({params} : ProjectProps){
   const {projectName} = await params
 
-  return (<ProjectClient projectName={projectName}/>)
+  return (<ProjectClient projectName={projectName} />)
 }

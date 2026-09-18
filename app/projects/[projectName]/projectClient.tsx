@@ -1,5 +1,8 @@
 'use client'
+import { useState } from 'react'
+import { motion } from 'motion/react'
 import { useTheme } from '@/app/utils/themeContext'
+import { useTransition } from '@/app/utils/transitionContext'
 
 import Image from 'next/image'
 
@@ -98,9 +101,9 @@ const projects = {
 
 export default function ProjectClient({projectName}: {projectName: string}){
   const {isLight} = useTheme()
+  const { transitionDirection } = useTransition()
 
   let project = projects[projectName as keyof typeof projects]
-  console.log(projects)
 
   if(!project){
     project = projects['default']
@@ -114,15 +117,16 @@ export default function ProjectClient({projectName}: {projectName: string}){
             lg:top-4 lg:left-4 lg:w-32'>
               <HomeButton />
             </div>
+            <div className='absolute top-1/2 z-10 left-2 lg:left-6 rounded-full'>
+              <ChangeProjectButton direction='left' link={project.previousProject} /> {/* previous project button */}
+            </div>
+            <div className='absolute top-1/2 z-10 right-2 lg:right-6 rounded-full'>
+              <ChangeProjectButton direction='right' link={project.nextProject} /> {/* next project button */}
+            </div>
     
-            <main className="min-h-0 w-[80%] flex-1 overflow-y-auto py-8 p-[min(100px,5%)]">
-              <div className='absolute top-1/2 z-10 left-2 lg:left-6'>
-                <ChangeProjectButton direction='left' link={project.previousProject} /> {/* previous project button */}
-              </div>
-              <div className='absolute top-1/2 z-10 right-2 lg:right-6'>
-                <ChangeProjectButton direction='right' link={project.nextProject} /> {/* next project button */}
-              </div>
-    
+            <motion.main className="min-h-0 w-[80%] flex-1 overflow-y-auto py-8 p-[min(100px,5%)]"
+            initial={{opacity: 0, x: transitionDirection == 'left' ? '-100%' : '100%'}}
+            animate={{opacity: 1, x: 0}}>
               <div className='w-full select-none'>
                 <Bubble type='title'>
                   <div className='relative w-48 aspect-square'>
@@ -187,7 +191,7 @@ export default function ProjectClient({projectName}: {projectName: string}){
                   </div>
                 </div>
               </ContentContainer>
-            </main>
+            </motion.main>
         </div>
       </div>
     )

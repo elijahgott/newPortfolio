@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "./utils/themeContext";
+import { TransitionProvider } from "./utils/transitionContext";
 import { MusicProvider } from "./utils/musicContext";
 import { AudioProvider } from "./utils/audioContext";
 import { NavProvider } from "./utils/navContext"
@@ -31,16 +32,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="h-full flex flex-col font-sans bg-black">
         <ThemeProvider>
-          <AudioProvider>
-            <MusicProvider>
-              <NavProvider>
-                <div className='relative mx-auto my-auto w-full max-w-[1920px] sm:h-full md:h-[80vh] lg:h-[84vh] min-h-[65vh] max-h-270'>
-                  {children}
-                  <NavBar />
-                </div>
-              </NavProvider>
-            </MusicProvider>
-          </AudioProvider>
+          <TransitionProvider>
+            <AudioProvider>
+              <MusicProvider>
+                <NavProvider>
+                  <div className='relative mx-auto my-auto w-full max-w-[1920px] sm:h-full md:h-[80vh] lg:h-[84vh] min-h-[65vh] max-h-270'>
+                    {children}
+                    <NavBar />
+                  </div>
+                </NavProvider>
+              </MusicProvider>
+            </AudioProvider>
+          </TransitionProvider>
         </ThemeProvider>
       </body>
     </html>
