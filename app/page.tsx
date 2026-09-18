@@ -75,8 +75,8 @@ export default function Home() {
             <h1 className="mt-8 font-bold">What i want</h1>
 
             <ul className="list-disc">
-              <li>make channels more responsive, they break when too small</li>
-              <li>transition between project pages? like slide to left/right</li>
+              <li>RESPONSIVENESS</li>
+              <li>put about me & dark mode toggle in nav when screen is small?</li>
             </ul>
           </div>
         </div>
