@@ -1,7 +1,7 @@
-import { useTheme } from "../utils/themeContext";
-import { useTransition } from "../utils/transitionContext";
-import { useAudio } from "../utils/audioContext";
-import { playSound } from "../utils/soundManager";
+import { useTheme } from "../../utils/themeContext";
+import { useTransition } from "../../utils/transitionContext";
+import { useAudio } from "../../utils/audioContext";
+import { playSound } from "../../utils/soundManager";
 
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';

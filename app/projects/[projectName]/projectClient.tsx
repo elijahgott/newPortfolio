@@ -1,5 +1,4 @@
 'use client'
-import { useState } from 'react'
 import { motion } from 'motion/react'
 import { useTheme } from '@/app/utils/themeContext'
 import { useTransition } from '@/app/utils/transitionContext'
@@ -8,9 +7,9 @@ import Image from 'next/image'
 
 import Bubble from '@/app/components/bubble'
 import ContentContainer from '@/app/components/contentContainer'
-import ProjectButton from '@/app/components/projectButton'
+import ProjectButton from '@/app/components/projects/projectButton'
 import HomeButton from '@/app/components/homeButton'
-import ChangeProjectButton from '@/app/components/changeProjectButton'
+import ChangeProjectButton from '@/app/components/projects/changeProjectButton'
 
 const projects = {
   'workout-tracker': {

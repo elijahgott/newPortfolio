@@ -1,8 +1,8 @@
 'use client'
 
-import { useTheme } from "../utils/themeContext";
-import { useAudio } from "../utils/audioContext";
-import { playSound } from "../utils/soundManager";
+import { useTheme } from "../../utils/themeContext";
+import { useAudio } from "../../utils/audioContext";
+import { playSound } from "../../utils/soundManager";
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
@@ -15,11 +15,18 @@ interface ProjectButtonProps{
 export default function ProjectButton({type, link}: ProjectButtonProps){
   const { audioUnlocked } = useAudio()
   const { isLight } = useTheme()
+
+  const playText = link == 'N/A' ? 'App Not Live' : 'Try App!'
+  const gitHubText = 'Visit GitHub Repo!'
+  const hoverText = type == 'play' ? playText : gitHubText
+
   return(
-    <div className={`select-none flex p-2 w-full relative rounded-full bg-zinc-300/15 backdrop-blur-md shadow-lg overflow-hidden border-2 border-white/40
+    <div data-text={hoverText} className={`relative select-none flex p-2 w-full rounded-full bg-zinc-300/15 backdrop-blur-md shadow-lg border-2 border-white/40
           ${ link == 'N/A' ? '' : 'hover:scale-105 hover:bg-cyan-400/80 active:scale-95 active:bg-cyan-500/80'}
           hover:cursor-pointer
-          transition-all duration-75`}
+          transition-all duration-75
+          before:content-[attr(data-text)] before:pointer-events-none before:absolute before:z-50 before:w-max before:bg-linear-to-b ${ isLight ? 'before:from-zinc-300/70 before:to-white before:border-white/75' : 'before:text-white before:from-zinc-600/70 before:to-zinc-900 before:border-zinc-600/75'}  before:border-2 before:shadow-lg before:font-semibold before:p-4 before:rounded-xl before:top-[-25%] before:left-[50%] before:translate-[-50%] before:scale-0 before:opacity-0 before:transition-all before:ease-in
+          hover:before:scale-100 hover:before:opacity-100`}
           onMouseEnter={() => {
             if(audioUnlocked && link !== 'N/A'){
               playSound('hover')
@@ -41,7 +48,7 @@ export default function ProjectButton({type, link}: ProjectButtonProps){
           {type == 'play' ?
             (
                 <a href={link} target="_blank" className={`${link == 'N/A' ? 'pointer-events-none' : ''} w-full aspect-square my-auto`}>
-                  <div className={`relative flex items-center justify-center w-full h-full bg-linear-to-tl ${link == 'N/A' ? 'from-zinc-500/80 to-zinc-400/80' : 'from-green-500/80 to-lime-400/80'}  rounded-full`}>
+                  <div className={`relative flex items-center justify-center w-full h-full bg-linear-to-tl ${link == 'N/A' ? 'from-zinc-500/80 to-zinc-400/80' : 'from-green-500/80 to-lime-400/80'} rounded-full`}>
                     <PlayArrowIcon sx={{ fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))' }} className="text-white"/>
                   </div>
                 </a>
