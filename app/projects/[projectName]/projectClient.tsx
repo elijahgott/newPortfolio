@@ -144,11 +144,13 @@ export default function ProjectClient({projectName}: {projectName: string}){
                     </div>
 
                     <div className='flex justify-center gap-2 mt-2'>
-                      <div className="flex w-32 aspect-square">
+                      <div className="flex aspect-square
+                      w-24 sm:w-28 md:w-32">
                         <ProjectButton type='play' link={project.playLink} />
                       </div>
                       
-                      <div className="flex w-32 aspect-square">
+                      <div className="flex aspect-square
+                      w-24 sm:w-28 md:w-32">
                         <ProjectButton type='github' link={project.gitHubLink} />
                       </div>
                     </div>

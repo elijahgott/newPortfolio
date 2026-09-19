@@ -45,23 +45,15 @@ export default function ProjectButton({type, link}: ProjectButtonProps){
           <div className={`z-10 pointer-events-none absolute top-8 left-4 bg-radial to-75% h-4 w-4 rounded-2xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
           <div className={`z-10 pointer-events-none absolute bottom-4 right-6 bg-radial to-80% h-6 w-6 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
           <div className={`z-10 pointer-events-none absolute bottom-8 right-4 bg-radial to-80% h-4 w-4 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
-          {type == 'play' ?
-            (
-                <a href={link} target="_blank" className={`${link == 'N/A' ? 'pointer-events-none' : ''} w-full aspect-square my-auto`}>
-                  <div className={`relative flex items-center justify-center w-full h-full bg-linear-to-tl ${link == 'N/A' ? 'from-zinc-500/80 to-zinc-400/80' : 'from-green-500/80 to-lime-400/80'} rounded-full`}>
-                    <PlayArrowIcon sx={{ fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))' }} className="text-white"/>
-                  </div>
-                </a>
-            )
-          :
-            (
-              <a href={link} target="_blank" className="w-full aspect-square rounded-full my-auto bg-linear-to-tl from-violet-600/80 to-fuchsia-400/80">
-                <div className="relative flex items-center justify-center w-full h-full">
-                  <GitHubIcon sx={{ fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))' }} className="text-black" />
-                </div>
-              </a>
-            )
-          }
+          <a href={link} target="_blank" className={`${link == 'N/A' ? 'pointer-events-none' : ''} w-full aspect-square rounded-full my-auto bg-linear-to-tl ${type == 'play' ? `${link == 'N/A' ? 'from-zinc-500/80 to-zinc-400/80' : 'from-green-500/80 to-lime-400/80'}` : 'from-violet-600/80 to-fuchsia-400/80'} `}>
+            <div className="relative flex items-center justify-center w-full h-full">
+              { type == 'play' ?
+                <PlayArrowIcon sx={{ fontSize: {xs: 56,sm: 64, md: 72, lg: 80}, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))' }} className="text-white"/>
+                :
+                <GitHubIcon sx={{ fontSize: {xs: 56,sm: 64, md: 72, lg: 80}, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))' }} className="text-black" />
+              }
+            </div>
+          </a>
         </div>
   )
 }
