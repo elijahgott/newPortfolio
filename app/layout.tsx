@@ -36,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <AudioProvider>
               <MusicProvider>
                 <NavProvider>
-                  <div className='relative mx-auto my-auto w-full max-w-[1920px] sm:h-full md:h-[80vh] lg:h-[84vh] min-h-[65vh] max-h-270'>
+                  <div className='relative mx-auto my-auto w-full max-w-[1920px] h-full md:h-[90vh] lg:h-[84vh] min-h-[65vh] max-h-270'>
                     {children}
                     <NavBar />
                   </div>

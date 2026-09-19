@@ -23,7 +23,7 @@ export default function VolumeUp(){
         playSound('click')
       }
     }} className={`relative hover:-translate-y-2 hover:scale-105 hover:cursor-pointer active:translate-y-0 active:scale-95 transition-all
-    before:content-['Volume_Down'] before:pointer-events-none before:absolute before:z-50 before:w-max before:bg-linear-to-b ${ isLight ? 'before:from-zinc-300/70 before:to-white before:border-white/75' : 'before:text-white before:from-zinc-600/70 before:to-zinc-900 before:border-zinc-600/75'}  before:border-2  before:shadow-lg before:font-semibold before:p-4 before:rounded-xl before:top-[-50%] before:left-[50%] before:translate-[-50%] before:scale-0 before:opacity-0 before:transition-all before:ease-in
+    before:content-['Volume_Up'] before:pointer-events-none before:absolute before:z-50 before:w-max before:bg-linear-to-b ${ isLight ? 'before:from-zinc-300/70 before:to-white before:border-white/75' : 'before:text-white before:from-zinc-600/70 before:to-zinc-900 before:border-zinc-600/75'}  before:border-2  before:shadow-lg before:font-semibold before:p-4 before:rounded-xl before:top-[-50%] before:left-[50%] before:translate-[-50%] before:scale-0 before:opacity-0 before:transition-all before:ease-in
     hover:before:scale-100 hover:before:opacity-100`}>
       <div className="max-w-20 aspect-square">
         <VolumeUpIcon sx={{fontSize: {xs: 56,sm: 64, md: 72, lg: 80}, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))'}} className="text-green-500" />

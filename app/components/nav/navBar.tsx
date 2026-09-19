@@ -48,7 +48,7 @@ export default function NavBar(){
       <div className={`pointer-events-none absolute bottom-1 right-6 bg-radial to-80% h-6 w-6 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' } transition-colors`} />
       <div className={`pointer-events-none absolute bottom-4 right-4 bg-radial to-80% h-4 w-4 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' } transition-colors`} />
 
-      <nav className="flex flex-row space-x-4 items-center justify-center w-full">
+      <nav className="flex flex-row space-x-1 items-center justify-center w-full">
         {navItems.map((item, i) => <NavItem key={i} name={item.name} linkTo={item.linkTo} />)}
 
         <MusicToggle />
