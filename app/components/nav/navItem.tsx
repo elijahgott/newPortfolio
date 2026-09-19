@@ -32,9 +32,9 @@ export default function NavItem({name, linkTo}: NavItemProps){
     data-name={name}>{
       <div className="max-w-20 aspect-square">
         { name === 'Elijah Gott | LinkedIn' ?
-          <LinkedInIcon sx={{fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))'}} className="text-blue-500"/>
+          <LinkedInIcon sx={{fontSize: {xs: 56,sm: 64, md: 72, lg: 80}, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))'}} className="text-blue-500"/>
           :
-          <GitHubIcon sx={{fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))'}} className="text-black"/>
+          <GitHubIcon sx={{fontSize: {xs: 56,sm: 64, md: 72, lg: 80}, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))'}} className="text-black"/>
         }
       </div>
     }</a>

@@ -34,9 +34,9 @@ export default function MusicToggle(){
       <div className="max-w-20 aspect-square">
         {
           isPlaying ?
-          <MusicNoteIcon sx={{fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))'}} className="text-orange-600" />
+          <MusicNoteIcon sx={{fontSize: {xs: 56,sm: 64, md: 72, lg: 80}, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))'}} className="text-orange-600" />
           :
-          <MusicOffIcon sx={{fontSize: 80, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))'}} className="text-orange-600" /> // i want to add an animated psuedo element for the strike through the note
+          <MusicOffIcon sx={{fontSize: {xs: 56,sm: 64, md: 72, lg: 80}, filter: 'drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.2))'}} className="text-orange-600" /> // i want to add an animated psuedo element for the strike through the note
         }
       </div>
     </button>
