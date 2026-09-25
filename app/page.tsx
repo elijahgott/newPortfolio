@@ -59,7 +59,7 @@ export default function Home() {
     <div className='h-full bg-size-[32px] bg-repeat bg-[url(/images/star-pattern.svg)] background-animation rounded-2xl'>
       <div className={`rounded-2xl h-full flex flex-col flex-1 items-center bg-linear-70 ${isLight ? 'from-zinc-300/90 to-zinc-100' : 'from-zinc-900/90 to-zinc-700'} transition-colors duration-500`}>
         <div className="flex w-full h-fit my-auto">
-          <div className="absolute top-4 left-4 w-32 aspect-square
+          <div className="absolute top-4 left-4 w-24 md:w-32 aspect-square
           xl:w-40">
             <Channel name="Elijah" imageSource='/channelIcons/about-me.jpg' linkTo="about-me" pixelated={false} />
           </div>
@@ -73,15 +73,9 @@ export default function Home() {
               return (<Channel key={c.name} name={c.name} imageSource={c.imageSource} linkTo={c.linkTo} pixelated={c.imagePixelated} />)
             })}
           </motion.main>
-          <div className="absolute top-4 right-4 w-32 aspect-square
+          <div className="absolute top-4 right-4 w-24 md:w-32 aspect-square
           xl:w-40">
             <DarkModeToggle />
-            <h1 className="mt-8 font-bold">What i want</h1>
-
-            <ul className="list-disc">
-              <li>RESPONSIVENESS</li>
-              <li>put about me & dark mode toggle in nav when screen is small?</li>
-            </ul>
           </div>
         </div>
       </div>

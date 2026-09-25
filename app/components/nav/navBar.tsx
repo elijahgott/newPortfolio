@@ -54,7 +54,6 @@ export default function NavBar(){
         <MusicToggle />
         <VolumeDown />
         <VolumeUp />
-        <DarkModeNav />
       </nav>
     </div>
   )

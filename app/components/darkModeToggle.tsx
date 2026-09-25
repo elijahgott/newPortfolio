@@ -13,7 +13,7 @@ export default function DarkModeToggle(){
   const {isLight, setIsLight} = useTheme()
 
   return(
-    <button className="select-none items-center w-full aspect-square rounded-full relative bg-zinc-300/15 backdrop-blur-xs shadow-lg overflow-hidden border-2 border-white/40 hidden lg:flex
+    <button className="select-none items-center w-full aspect-square rounded-full relative bg-zinc-300/15 backdrop-blur-xs shadow-lg overflow-hidden border-2 border-white/40 flex
         hover:scale-105 hover:bg-cyan-400/80 hover:cursor-pointer
         active:scale-95 active:bg-cyan-500/80
         transition-all duration-100"
