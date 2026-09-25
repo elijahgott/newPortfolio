@@ -41,10 +41,10 @@ export default function ProjectButton({type, link}: ProjectButtonProps){
           { /* inner border */}
           <div className="pointer-events-none absolute inset-0.5 rounded-full border border-white/20" />
           {/* shiny corners */}
-          <div className={`z-10 pointer-events-none absolute top-4 left-6 bg-radial to-75% h-6 w-6 rounded-2xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
-          <div className={`z-10 pointer-events-none absolute top-8 left-4 bg-radial to-75% h-4 w-4 rounded-2xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
-          <div className={`z-10 pointer-events-none absolute bottom-4 right-6 bg-radial to-80% h-6 w-6 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
-          <div className={`z-10 pointer-events-none absolute bottom-8 right-4 bg-radial to-80% h-4 w-4 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
+          <div className={`z-10 pointer-events-none absolute top-2 md:top-4 left-4 md:left-6 bg-radial to-75% h-6 w-6 rounded-2xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
+          <div className={`z-10 pointer-events-none absolute top-6 md:top-8 left-2 md:left-4 bg-radial to-75% h-4 w-4 rounded-2xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
+          <div className={`z-10 pointer-events-none absolute bottom-2 md:bottom-4 right-4 md:right-6 bg-radial to-80% h-6 w-6 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
+          <div className={`z-10 pointer-events-none absolute bottom-6 md:bottom-8 right-2 md:right-4 bg-radial to-80% h-4 w-4 rounded-xl ${ isLight ? 'from-white/80' : 'from-white/30' }`} />
           <a href={link} target="_blank" className={`${link == 'N/A' ? 'pointer-events-none' : ''} w-full aspect-square rounded-full my-auto bg-linear-to-tl ${type == 'play' ? `${link == 'N/A' ? 'from-zinc-500/80 to-zinc-400/80' : 'from-green-500/80 to-lime-400/80'}` : 'from-violet-600/80 to-fuchsia-400/80'} `}>
             <div className="relative flex items-center justify-center w-full h-full">
               { type == 'play' ?

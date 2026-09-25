@@ -130,7 +130,7 @@ export default function ProjectClient({projectName}: {projectName: string}){
               <div className='w-full select-none'>
                 <Bubble type='title'>
                   <div className='relative w-48 aspect-square'>
-                    <Image src={project.iconSource} alt={project.name} style={{'imageRendering': 'pixelated'}} fill className="rounded-xl object-contain" />
+                    <Image src={project.iconSource} alt={project.name} style={{'imageRendering': 'pixelated'}} fill sizes='(max-width: 640px) 100px, (max-width: 1024px) 150px, 200px' className="rounded-xl object-contain" />
                   </div>
                   <h1 className={`h-fit ml-4 text-5xl text-center text-white font-bold ${ isLight ? 'drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]' : 'drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]'} `}>{project.name}</h1>
                 </Bubble>
@@ -140,7 +140,7 @@ export default function ProjectClient({projectName}: {projectName: string}){
                 <div className='w-full flex flex-col lg:flex-row xl:px-4'>
                   <div className='ml-0 mr-auto w-full lg:w-1/2 float-left'>
                     <div className='relative w-full aspect-video'>
-                      <Image src={project.imageSource} alt={project.name} fill className="rounded-2xl object-fill shadow-2xl border-2 border-white/30" />
+                      <Image src={project.imageSource} alt={project.name} fill sizes='(max-width: 640px) 90vw, (max-width: 1024px) 70, 50vw' className="rounded-2xl object-fill shadow-2xl border-2 border-white/30" />
                     </div>
 
                     <div className='flex justify-center gap-2 mt-2'>
