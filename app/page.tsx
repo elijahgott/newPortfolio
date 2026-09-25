@@ -58,7 +58,7 @@ export default function Home() {
   return (
     <div className='h-full bg-size-[32px] bg-repeat bg-[url(/images/star-pattern.svg)] background-animation rounded-2xl'>
       <div className={`rounded-2xl h-full flex flex-col flex-1 items-center bg-linear-70 ${isLight ? 'from-zinc-300/90 to-zinc-100' : 'from-zinc-900/90 to-zinc-700'} transition-colors duration-500`}>
-        <div className="flex flex-col landscape:flex-row lg:flex-row w-full h-fit my-auto">
+        <div className="flex flex-col landscape:flex-row lg:flex-row w-full h-fit my-auto portrait:mt-0">
           {/* top bar on small screens */}
           <div className="flex landscape:hidden lg:hidden justify-between p-2 w-dvw">
             <div className="flex aspect-square
