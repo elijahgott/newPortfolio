@@ -75,13 +75,14 @@ export default function AboutMe(){
                 <Image src="/channelIcons/about-me.jpg" alt="Photo of me (Elijah Gott)" fill sizes="256px" className="rounded-xl object-contain" />
               </div>
               <div className="flex flex-col gap-1 h-fit ml-4">
-                <h1 className={`text-5xl text-center text-white font-bold ${ isLight ? 'drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]' : 'drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]'}`} >Elijah Gott</h1>
-                <h2 className={`text-xl text-center indent-2 font-semibold ${ isLight ? 'text-zinc-600' : 'text-zinc-400 drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]'}`} >Junior Software Developer</h2>
+                <h1 className={`text-5xl text-white font-bold ${ isLight ? 'drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]' : 'drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]'}`} >Elijah Gott</h1>
+                <h2 className={`text-xl font-semibold ${ isLight ? 'text-zinc-600' : 'text-zinc-400 drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]'}`} >Junior Software Developer</h2>
+                <div className={`sm:absolute top-0 right-0 flex -ml-2 sm:ml-0 sm:m-5 text-md font-semibold ${ isLight ? 'text-zinc-600' : 'text-zinc-400 drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]'}`}>
+                  <LocationPinIcon />
+                  <p>Indianapolis, IN</p>
+                </div>
               </div>
-              <div className={`absolute top-0 right-0 flex m-5 text-md font-semibold ${ isLight ? 'text-zinc-600' : 'text-zinc-400 drop-shadow-[0_0_4px_rgba(0,0,0,0.8)]'}`}>
-                <LocationPinIcon />
-                <p>Indianapolis, IN</p>
-              </div>
+              
             </Bubble>
           </div>
           
@@ -92,7 +93,7 @@ export default function AboutMe(){
                 {/* about me section */}
                 <div className="flex flex-col lg:flex-row">
                   <div className="flex flex-col w-full lg:w-1/2">
-                    <h2 className='font-bold text-[3rem] mb-4'>About Me</h2>
+                    <h2 className='font-bold text-[3rem] text-center md:text-left mb-4'>About Me</h2>
                     <p className="w-full indent-4 text-xl mr-2 h-fit">In 2020 I enrolled at Purdue for Computer Engineering, and in 2024 I graduated from Purdue with a Bachelor&apos;s Degree in Computer Science. Ever since my enrollment, I have been busy expanding my technical skills and knowledge. Since graduation, I have largely focused my efforts on Full Stack Web Development, having developed multiple full stack web applications, however I also have extensive experience with Database, Application, and Game Development.</p>
                   </div>
 
@@ -135,7 +136,7 @@ export default function AboutMe(){
               <section className="flex flex-col mt-16 mb-8 text-xl">
                 <div className="flex flex-col xl:flex-row">
                   <div className='flex flex-col w-full h-fit my-auto xl:w-1/2 ml-auto mr-0'>
-                    <h2 className='font-bold text-[3rem] ml-2 mb-4'>Personal</h2>
+                    <h2 className='font-bold text-[3rem] ml-2 mb-4 text-center md:text-left'>Personal</h2>
                     <p className="indent-4 mx-2">When I&apos;m not coding, I try to get outside as much as possible. Some of my favorite ways to do this are by working out, biking, and hiking. When I&apos;m feeling artsy, I also like to draw and play piano, although I am not great at either (yet).</p>
                     <p className="indent-4 mt-4 mx-2">I recently visited the Grand Teton National Park in Wyoming, and was blown away by how beautiful it was. Over the few days I was there, I hiked about 30 miles, and gained approximately 5,000 feet in elevation across the different trails.</p>
                   </div>
