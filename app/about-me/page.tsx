@@ -119,12 +119,10 @@ export default function AboutMe(){
                 </div>
                 <ToggleHidden>
                     <div className="float-none md:float-left w-min m-4">
-                      <Bubble type="image">
                         <div className='overflow-hidden relative w-64 aspect-square md:mr-4 md:ml-2 mt-4 shadow-lg rounded-xl'>
                           <Image src="/images/about-me/self-image.jpg" alt="Photo of me at college graduation." fill sizes="256px" className="object-cover" />
                         </div>
-                        <p className={`mx-4 mt-2`}>Photo taken of me at college graduation (highest quality photo I have).</p>
-                      </Bubble>
+                        <p className='text-sm mx-2 mt-2' >Photo taken of me at college graduation (highest quality photo I have).</p>
                     </div>
 
                     <p className="mt-4 indent-4 text-xl">In 2020, I began my programming journey with Java during my freshman coursework, and moved onto C++ next. After learning the basics of these two languages, as well as HTML and CSS, I began learning React (before learning JavaScript) when I began creating my Senior Project, my <Anchor type="internal" linkTo="/projects/music-tracker">Music Tracker</Anchor> (which I have vastly improved after learning much more about React, Web Design, and Backend Development, and Database Development).</p>
