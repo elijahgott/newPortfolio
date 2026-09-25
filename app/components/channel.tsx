@@ -21,7 +21,7 @@ export default function Channel({name, imageSource, linkTo, pixelated}: ChannelP
     hover:scale-110 hover:bg-cyan-400/80 hover:cursor-pointer
     active:scale-95
     transition-all duration-100 ease-out
-    before:content-[attr(data-name)] before:text-white before:font-bold before:text-center before:pointer-events-none before:absolute before:z-50 before:w-full md:before:w-max before:bg-linear-to-b before:from-cyan-300/80 before:to-cyan-400 before:border-2 before:border-cyan-300/90 before:p-1 md:before:p-2 lg:before:p-4 before:rounded-full before:bottom-0 before:left-[50%] before:translate-x-[-50%] before:scale-0 before:opacity-0 before:transition-all before:ease-in-out
+    before:content-[attr(data-name)] before:text-white before:font-bold before:text-center before:pointer-events-none before:absolute before:z-50 before:w-full md:before:w-max before:bg-linear-to-b before:from-cyan-300/80 before:to-cyan-400 before:border-2 before:border-cyan-300/90 before:p-1 md:before:p-2 lg:before:p-4 before:rounded-full before:bottom-1 before:left-[50%] before:translate-x-[-50%] before:scale-0 before:opacity-0 before:transition-all before:ease-in-out
     hover:before:scale-100 hover:before:opacity-100`} data-name={name}
       onMouseEnter={() => {
         if(audioUnlocked){
