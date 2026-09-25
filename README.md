@@ -8,7 +8,7 @@ My portfolio website is intended to showcase my capabilities as a software devel
 - Each app represents a project I have completed
   - Each app leads to a page with details and images about each project
 - Account button in top left leads to 'About me' section with a bio
-- Navbar at bottom includes links to my Github profile, LinkedIn, etc
+- Navbar at bottom includes links to my Github profile, LinkedIn, and "Settings" such as volume controls, and theme controls.
 ---
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
