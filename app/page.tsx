@@ -59,11 +59,11 @@ export default function Home() {
     <div className='h-full bg-size-[32px] bg-repeat bg-[url(/images/star-pattern.svg)] background-animation rounded-2xl'>
       <div className={`rounded-2xl h-full flex flex-col flex-1 items-center bg-linear-70 ${isLight ? 'from-zinc-300/90 to-zinc-100' : 'from-zinc-900/90 to-zinc-700'} transition-colors duration-500`}>
         <div className="flex w-full h-fit my-auto">
-          <div className="absolute top-4 left-4 w-24 md:w-32 aspect-square
+          <div className="absolute top-4 left-4 w-28 md:w-32 aspect-square
           xl:w-40">
             <Channel name="Elijah" imageSource='/channelIcons/about-me.jpg' linkTo="about-me" pixelated={false} />
           </div>
-          <motion.main className="w-[80%] lg:aspect-video mx-auto grid grid-cols-3 grid-rows-5 gap-4
+          <motion.main className="w-full sm:w-[80%] lg:aspect-video mx-4 sm:mx-auto mt-8 md:mt-0 grid grid-cols-3 grid-rows-5 gap-4
           lg:grid-cols-5 lg:grid-rows-3 md:gap-4 md:p-8
           lg:gap-8"
           initial={{opacity: 0, y: '-100%'}}
@@ -73,7 +73,7 @@ export default function Home() {
               return (<Channel key={c.name} name={c.name} imageSource={c.imageSource} linkTo={c.linkTo} pixelated={c.imagePixelated} />)
             })}
           </motion.main>
-          <div className="absolute top-4 right-4 w-24 md:w-32 aspect-square
+          <div className="absolute top-4 right-4 w-28 md:w-32 aspect-square
           xl:w-40">
             <DarkModeToggle />
           </div>

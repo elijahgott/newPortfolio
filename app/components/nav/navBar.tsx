@@ -1,7 +1,6 @@
 'use client'
 import { useTheme } from "@/app/utils/themeContext"
 
-import DarkModeNav from "./darkModeNav"
 import NavItem from "./navItem"
 import MusicToggle from "./musicToggle"
 import VolumeUp from './volumeUp'
