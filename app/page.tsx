@@ -58,22 +58,22 @@ export default function Home() {
   return (
     <div className='h-full bg-size-[32px] bg-repeat bg-[url(/images/star-pattern.svg)] background-animation rounded-2xl'>
       <div className={`rounded-2xl h-full flex flex-col flex-1 items-center bg-linear-70 ${isLight ? 'from-zinc-300/90 to-zinc-100' : 'from-zinc-900/90 to-zinc-700'} transition-colors duration-500`}>
-        <div className="flex flex-col lg:flex-row w-full h-fit my-auto">
+        <div className="flex flex-col landscape:flex-row lg:flex-row w-full h-fit my-auto">
           {/* top bar on small screens */}
-          <div className="flex lg:hidden justify-between p-2 w-dvw">
-            <div className="flex w-28 md:w-32 aspect-square
-            xl:w-40">
+          <div className="flex landscape:hidden lg:hidden justify-between p-2 w-dvw">
+            <div className="flex aspect-square
+            w-28 md:w-32 xl:w-40">
               <Channel name="Elijah" imageSource='/channelIcons/about-me.jpg' linkTo="about-me" pixelated={false} />
             </div>
-            <div className="flex w-28 md:w-32 aspect-square
-            xl:w-40">
+            <div className="flex aspect-square
+            w-28 md:w-32 xl:w-40">
               <DarkModeToggle />
             </div>
           </div>
           {/* left bar on med+ screens */}
-          <div className="hidden lg:flex w-fit h-fit px-2">
-            <div className="flex w-28 md:w-32 aspect-square
-            xl:w-40">
+          <div className="hidden landscape:flex lg:flex w-fit h-fit px-2">
+            <div className="flex aspect-square
+            w-28 md:w-32 xl:w-40">
               <Channel name="Elijah" imageSource='/channelIcons/about-me.jpg' linkTo="about-me" pixelated={false} />
             </div>
           </div>
@@ -89,9 +89,9 @@ export default function Home() {
             })}
           </motion.main>
           {/* right bar on med+ screens */}
-          <div className="hidden lg:flex w-fit h-fit px-2">
-            <div className="flex w-28 md:w-32 aspect-square
-            xl:w-40">
+          <div className="hidden landscape:flex lg:flex w-fit h-fit px-2">
+            <div className="flex aspect-square
+            w-28 md:w-32 xl:w-40">
               <DarkModeToggle />
             </div>
           </div>
