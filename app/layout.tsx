@@ -28,7 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased text-[14px] md:text-[16px] lg:text-[18px]`}
     >
       <body className="h-full flex flex-col font-sans bg-black">
         <ThemeProvider>
@@ -36,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <AudioProvider>
               <MusicProvider>
                 <NavProvider>
-                  <div className='relative mx-auto my-auto w-full max-w-[1920px] h-full md:h-[90vh] lg:h-[84vh] min-h-[65vh] max-h-270'>
+                  <div className='relative mx-auto my-auto w-full h-full md:h-[90vh] lg:h-[84vh] max-w-[1920px] max-h-270'>
                     {children}
                     <NavBar />
                   </div>
