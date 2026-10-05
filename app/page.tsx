@@ -78,7 +78,7 @@ export default function Home() {
             </div>
           </div>
 
-          <motion.main className="w-full p-2 sm:w-[80%] lg:aspect-video sm:mx-auto grid portrait:grid-cols-3 portrait:grid-rows-5 gap-4
+          <motion.main className="w-full p-2 sm:w-[80%] lg:aspect-video sm:mx-auto grid portrait:grid-cols-4 portrait:grid-rows-5 gap-4
           landscape:grid-cols-5 landscape:grid-rows-3 md:gap-4 md:p-8
           lg:gap-8"
           initial={{opacity: 0, y: '-100%'}}
